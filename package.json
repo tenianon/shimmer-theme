@@ -1,0 +1,41 @@
+{
+  "name": "shimmer-theme",
+  "version": "0.0.5",
+  "displayName": "Shimmer Theme",
+  "description": "A theme may be comfortable",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/tenianon/shimmer-theme"
+  },
+  "homepage": "https://github.com/tenianon/shimmer-theme/blob/main/README.md",
+  "author": {
+    "name": "Nian"
+  },
+  "publisher": "Nian",
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark"
+  ],
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "type": "module",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Shimmer Theme Dark Melancholy",
+        "uiTheme": "vs-dark",
+        "path": "./themes/shimmer-theme-dark-melancholy.json"
+      },
+      {
+        "label": "Shimmer Theme Dark Neutral",
+        "uiTheme": "vs-dark",
+        "path": "./themes/shimmer-theme-dark-neutral.json"
+      }
+    ]
+  }
+}
