@@ -2,33 +2,57 @@
 
 <div align="center">
 
-  ![icon.png](https://i.postimg.cc/13dVCSNm/icon.png)
+![icon.png](https://i.postimg.cc/13dVCSNm/icon.png)
 
-  <br/> <br/>
+<br/> <br/>
+
   <h1>Shimmer Theme README</h1>
   <br/>
 
-  [English Docs](https://github.com/tenianon/shimmer-theme/blob/main/README.md)
-    [中文文档]
+[English Docs](https://github.com/tenianon/shimmer-theme/blob/main/README.md)
+[中文文档]
 
 </div>
 
 ## 效果图
 
 #### Dark Melancholy
+
 <div align="center">
 
-  ![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/FFMGc0w9/Pix-Pin-2025-05-09-05-42-10.png)
+![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/x1qHKMX3/Pix-Pin-2025-05-21-05-06-31.png)
+
+</div>
+
+#### Dark Melancholy Block
+
+<div align="center">
+
+![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/B651qCz4/Pix-Pin-2025-05-21-05-08-09.png)
+
 </div>
 
 #### Dark Neutral
+
 <div align="center">
 
-  ![shimmer-theme-dark-neutral.png](https://i.postimg.cc/3r4ndtSS/Pix-Pin-2025-05-09-05-41-35.png)
+![shimmer-theme-dark-neutral.png](https://i.postimg.cc/wTNY3bVX/Pix-Pin-2025-05-21-05-14-24.png)
 
 </div>
 
-## 安装
+#### Dark Neutral Block
+
+<div align="center">
+
+![shimmer-theme-dark-neutral.png](https://i.postimg.cc/ydCZ4GvL/Pix-Pin-2025-05-21-05-08-46.png)
+
+</div>
+
+## 建议
+
+使用该主题时建议把 **括号对着色** 关闭，打开 `管理` -> `设置` 在输入框输入 `启用括号` ，取消勾选 **控制是否启用括号对着色配置**
+
+## 使用
 
 #### 方式一
 
@@ -36,11 +60,11 @@
 
 #### 方式二
 
-点击 `管理 -> 主题 -> 颜色主题`，颜色主题列表弹窗中选择 `Shimmer Theme` 开头的名称主题
+打开 `管理` -> `主题` -> `颜色主题`，颜色主题列表弹窗中选择 `Shimmer Theme` 开头的名称主题
 
 ## 修改配色
 
-点击 `管理 -> 设置 -> 打开设置(Json) -> 打开设置(ui)[标签栏右边的图标列]` ，在 `setting.json` 文件里追加以下内容
+打开 `管理` -> `设置` -> `打开设置(Json)` -> `打开设置(ui)` **[标签栏右边的图标列]** ，在 `setting.json` 文件里追加以下内容
 
 #### 例子
 
