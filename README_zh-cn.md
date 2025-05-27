@@ -16,11 +16,12 @@
 
 ## 效果图
 
+
 #### Dark Melancholy
 
 <div align="center">
 
-![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/WzP4gzsH/shimmer-theme-dark-melancholy.png)
+![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/dqzyyc3z/shimmer-theme-dark-melancholy.png)
 
 </div>
 
@@ -28,7 +29,7 @@
 
 <div align="center">
 
-![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/WzP4gzsH/shimmer-theme-dark-melancholy.png)
+![shimmer-theme-dark-melancholy-block.png](https://i.postimg.cc/D7wLVcRY/shimmer-theme-dark-melancholy-block.png)
 
 </div>
 
@@ -36,7 +37,7 @@
 
 <div align="center">
 
-![shimmer-theme-dark-neutral.png](https://i.postimg.cc/MZyHx7D2/shimmer-theme-dark-neutral.png)
+![shimmer-theme-dark-neutral.png](https://i.postimg.cc/Q81WgYWV/shimmer-theme-dark-neutral.png)
 
 </div>
 
@@ -44,17 +45,18 @@
 
 <div align="center">
 
-![shimmer-theme-dark-neutral.png](https://i.postimg.cc/d3mVBF1t/shimmer-theme-dark-neutral-block.png)
+![shimmer-theme-dark-neutral-block.png](https://i.postimg.cc/yVJRx81m/shimmer-theme-dark-neutral-block.png)
 
 </div>
 
-#### Dark Modern (现代深色)
+#### Dark Modern
 
 <div align="center">
 
-![shimmer-theme-dark-neutral.png](https://i.postimg.cc/02PQNzW6/shimmer-theme-dark-modern.png)
+![shimmer-theme-dark-modern.png](https://i.postimg.cc/BJ7DJK0Z/shimmer-theme-dark-modern.png)
 
 </div>
+
 
 ## 建议
 
