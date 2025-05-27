@@ -1,11 +1,11 @@
 {
-  "include": "./shimmer-theme-dark-neutral.json",
-  "label": "Shimmer Theme Dark Neutral 05",
-  "name": "shimmer-theme-dark-neutral_5",
+  "include": "./shimmer-theme-dark-modern.json",
+  "label": "Shimmer Theme Dark Modern 05",
+  "name": "shimmer-theme-dark-modern_5",
   "semanticHighlighting": true,
   "semanticTokenColors": {
     "comment": {
-      "foreground": "#6d6d6d"
+      "foreground": "#818281"
     },
     "enum": {
       "foreground": "#55b7c6"
@@ -121,7 +121,7 @@
         "variable.other.link.underline.jsdoc"
       ],
       "settings": {
-        "foreground": "#6d6d6d"
+        "foreground": "#818281"
       }
     },
     {
@@ -252,7 +252,7 @@
         "meta.property-list.scss"
       ],
       "settings": {
-        "foreground": "#8e8e8e"
+        "foreground": "#a2a3a2"
       }
     },
     {
@@ -271,7 +271,7 @@
         "source.rust"
       ],
       "settings": {
-        "foreground": "#9f9f9f"
+        "foreground": "#b2b3b2"
       }
     },
     {
@@ -477,7 +477,7 @@
       ],
       "settings": {
         "fontStyle": "strikethrough",
-        "foreground": "#7d7d7d"
+        "foreground": "#919291"
       }
     },
     {

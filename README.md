@@ -20,7 +20,7 @@
 
 <div align="center">
 
-![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/x1qHKMX3/Pix-Pin-2025-05-21-05-06-31.png)
+![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/WzP4gzsH/shimmer-theme-dark-melancholy.png)
 
 </div>
 
@@ -28,7 +28,7 @@
 
 <div align="center">
 
-![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/B651qCz4/Pix-Pin-2025-05-21-05-08-09.png)
+![shimmer-theme-dark-melancholy.png](https://i.postimg.cc/WzP4gzsH/shimmer-theme-dark-melancholy.png)
 
 </div>
 
@@ -36,7 +36,7 @@
 
 <div align="center">
 
-![shimmer-theme-dark-neutral.png](https://i.postimg.cc/wTNY3bVX/Pix-Pin-2025-05-21-05-14-24.png)
+![shimmer-theme-dark-neutral.png](https://i.postimg.cc/MZyHx7D2/shimmer-theme-dark-neutral.png)
 
 </div>
 
@@ -44,7 +44,15 @@
 
 <div align="center">
 
-![shimmer-theme-dark-neutral.png](https://i.postimg.cc/ydCZ4GvL/Pix-Pin-2025-05-21-05-08-46.png)
+![shimmer-theme-dark-neutral.png](https://i.postimg.cc/d3mVBF1t/shimmer-theme-dark-neutral-block.png)
+
+</div>
+
+#### Dark Modern
+
+<div align="center">
+
+![shimmer-theme-dark-neutral.png](https://i.postimg.cc/02PQNzW6/shimmer-theme-dark-modern.png)
 
 </div>
 

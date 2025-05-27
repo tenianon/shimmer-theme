@@ -27,93 +27,88 @@
     "themes": [
       {
         "label": "Shimmer Theme Dark Melancholy",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy.json"
+        "path": "./themes/shimmer-theme-dark-melancholy.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Melancholy 05",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy_5.json"
+        "path": "./themes/shimmer-theme-dark-melancholy_5.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Melancholy 10",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy_10.json"
-      },
-      {
-        "label": "Shimmer Theme Dark Melancholy 15",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy_15.json"
-      },
-      {
-        "label": "Shimmer Theme Dark Melancholy 20",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy_20.json"
+        "path": "./themes/shimmer-theme-dark-melancholy_10.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Melancholy Block",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy-block.json"
+        "path": "./themes/shimmer-theme-dark-melancholy-block.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Melancholy Block 05",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy-block_5.json"
+        "path": "./themes/shimmer-theme-dark-melancholy-block_5.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Melancholy Block 10",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy-block_10.json"
+        "path": "./themes/shimmer-theme-dark-melancholy-block_10.json",
+        "uiTheme": "vs-dark"
       },
       {
-        "label": "Shimmer Theme Dark Melancholy Block 15",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy-block_15.json"
-      },
-      {
-        "label": "Shimmer Theme Dark Melancholy Block 20",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-melancholy-block_20.json"
+        "label": "Shimmer Theme Dark Neutral -2",
+        "path": "./themes/shimmer-theme-dark-neutral_-2.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Neutral",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-neutral.json"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral -5",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-neutral_-5.json"
+        "path": "./themes/shimmer-theme-dark-neutral.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Neutral 05",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-neutral_5.json"
+        "path": "./themes/shimmer-theme-dark-neutral_5.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Neutral 10",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-neutral_10.json"
+        "path": "./themes/shimmer-theme-dark-neutral_10.json",
+        "uiTheme": "vs-dark"
+      },
+      {
+        "label": "Shimmer Theme Dark Neutral Block -2",
+        "path": "./themes/shimmer-theme-dark-neutral-block_-2.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Neutral Block",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-neutral-block.json"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral Block -5",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-neutral-block_-5.json"
+        "path": "./themes/shimmer-theme-dark-neutral-block.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Neutral Block 05",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-neutral-block_5.json"
+        "path": "./themes/shimmer-theme-dark-neutral-block_5.json",
+        "uiTheme": "vs-dark"
       },
       {
         "label": "Shimmer Theme Dark Neutral Block 10",
-        "uiTheme": "vs-dark",
-        "path": "./themes/shimmer-theme-dark-neutral-block_10.json"
+        "path": "./themes/shimmer-theme-dark-neutral-block_10.json",
+        "uiTheme": "vs-dark"
+      },
+      {
+        "label": "Shimmer Theme Dark Modern",
+        "path": "./themes/shimmer-theme-dark-modern.json",
+        "uiTheme": "vs-dark"
+      },
+      {
+        "label": "Shimmer Theme Dark Modern 05",
+        "path": "./themes/shimmer-theme-dark-modern_5.json",
+        "uiTheme": "vs-dark"
+      },
+      {
+        "label": "Shimmer Theme Dark Modern 10",
+        "path": "./themes/shimmer-theme-dark-modern_10.json",
+        "uiTheme": "vs-dark"
       }
     ]
   }

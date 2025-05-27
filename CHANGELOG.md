@@ -1,5 +1,16 @@
 # Change Log
 
+## v0.07
+
+### Add
+
+- Added `Rust` Code coloring support
+- Added `Dark Modern` theme, Workbench colors based on Vscode Dark Modern
+
+### Fix
+
+- Close HTML **<[tag] />**  closing tag `/` coloring in `vue`
+
 ## v0.06
 
 ### Add
