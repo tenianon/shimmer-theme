@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.08
+
+### Fix
+
+- README effect image path
+
 ## v0.07
 
 ### Add
