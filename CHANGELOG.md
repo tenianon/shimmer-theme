@@ -1,12 +1,22 @@
 # Change Log
 
-## v0.08
+## v0.0.9
+
+### Fix
+
+- The background of `activityBar.background` in the default layout
+
+---
+
+## v0.0.8
 
 ### Fix
 
 - README effect image path
 
-## v0.07
+---
+
+## v0.0.7
 
 ### Add
 
@@ -17,7 +27,9 @@
 
 - Close HTML **<[tag] />**  closing tag `/` coloring in `vue`
 
-## v0.06
+---
+
+## v0.0.6
 
 ### Add
 
@@ -31,7 +43,9 @@
 
 - Fixed a ton of tiny details.
 
-## v0.05
+---
+
+## v0.0.5
 
 ### Fix
 
@@ -41,7 +55,9 @@
 
 - `number` and `typeParameter` color
 
-## v0.04
+---
+
+## v0.0.4
 
 ### Refactors
 
