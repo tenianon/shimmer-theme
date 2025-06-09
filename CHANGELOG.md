@@ -6,6 +6,8 @@
 
 - `class.defaultLibrary` coloring in vue
 
+---
+
 ## v0.0.9
 
 ### Fix
