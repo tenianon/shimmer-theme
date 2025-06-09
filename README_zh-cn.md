@@ -9,8 +9,8 @@
   <h1>Shimmer Theme README</h1>
   <br/>
 
-[English Docs](https://github.com/tenianon/shimmer-theme/blob/main/README.md)
-[中文文档]
+[English Docs](https://github.com/tenianon/shimmer-theme/blob/main/README.md) |
+中文文档
 
 </div>
 

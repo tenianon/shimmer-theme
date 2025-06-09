@@ -223,6 +223,9 @@
     "class.declaration:vue": {
       "foreground": "#4495eb"
     },
+    "class.defaultLibrary:vue": {
+      "foreground": "#4495eb"
+    },
     "attributeBracket.attribute:rust": {
       "foreground": "#8a8b8a"
     },

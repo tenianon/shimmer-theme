@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.1.0
+
+### Fix
+
+- `class.defaultLibrary` coloring in vue
+
 ## v0.0.9
 
 ### Fix
@@ -54,12 +60,3 @@
 ### Change
 
 - `number` and `typeParameter` color
-
----
-
-## v0.0.4
-
-### Refactors
-
-- Enable SemanticHighlighting, more delicate coloring
-- Add `Less` and `Sass` syntax support

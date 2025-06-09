@@ -100,6 +100,9 @@
     "class.declaration:vue": {
       "foreground": "#80c5ff"
     },
+    "class.defaultLibrary:vue": {
+      "foreground": "#80c5ff"
+    },
     "attributeBracket.attribute:rust": {
       "foreground": "#babbba"
     },
