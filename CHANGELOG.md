@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.1.1
+
+### Fix
+
+- In `vue` files, `component` colors may display incorrectly under certain conditions. You need to use [Vue (Official)](https://github.com/vuejs/language-tools) version `3.0.2` or higher.
+
 ## v0.1.0
 
 ### Fix

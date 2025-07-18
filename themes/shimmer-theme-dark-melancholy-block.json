@@ -128,6 +128,9 @@
   "name": "shimmer-theme-dark-melancholy-block",
   "semanticHighlighting": true,
   "semanticTokenColors": {
+    "class": {
+      "foreground": "#4495eb"
+    },
     "comment": {
       "foreground": "#6a6b6a"
     },
@@ -191,12 +194,6 @@
     "templateType:cpp": {
       "foreground": "#d97189"
     },
-    "class:html": {
-      "foreground": "#4495eb"
-    },
-    "class:javascript": {
-      "foreground": "#4495eb"
-    },
     "class.builtin:python": {
       "foreground": "#149dc9"
     },
@@ -214,18 +211,6 @@
     },
     "selfParameter:python": {
       "foreground": "#6ca371"
-    },
-    "class:typescript": {
-      "foreground": "#4495eb"
-    },
-    "class:typescriptreact": {
-      "foreground": "#4495eb"
-    },
-    "class.declaration:vue": {
-      "foreground": "#4495eb"
-    },
-    "class.defaultLibrary:vue": {
-      "foreground": "#4495eb"
     },
     "attributeBracket.attribute:rust": {
       "foreground": "#8a8b8a"
@@ -516,7 +501,6 @@
     {
       "scope": [
         "support.constant.parity",
-        "meta.class.js entity.other.inherited-class.js",
         "text.html.markdown meta.embedded.math.markdown",
         "source.python support.type.metaclass.python",
         "support.class.ts",
@@ -611,8 +595,7 @@
       "scope": [
         "text.html.markdown punctuation.separator.table.markdown",
         "text.html.markdown punctuation.definition.table.markdown",
-        "source.vue meta.tag.other entity.name.tag",
-        "source.vue meta.tag.custom entity.name.tag"
+        "support.class.component.vue"
       ],
       "settings": {
         "foreground": "#5aab81"
