@@ -5,17 +5,17 @@
     "activityBar.foreground": "#896bf2",
     "activityBar.inactiveForeground": "#878787",
     "activityBarBadge.background": "#755ade",
-    "activityBarBadge.foreground": "#ffd8ff",
+    "activityBarBadge.foreground": "#ffdaff",
     "activityBarTop.activeBorder": "#755ade",
     "activityBarTop.dropBorder": "#37373799",
     "activityBarTop.foreground": "#896bf2",
     "activityBarTop.inactiveForeground": "#878787",
     "badge.background": "#755ade",
-    "badge.foreground": "#ffd8ff",
+    "badge.foreground": "#ffdaff",
     "breadcrumb.focusForeground": "#9475fd",
     "button.background": "#755ade",
     "button.border": "#00000000",
-    "button.foreground": "#ffd8ff",
+    "button.foreground": "#ffdaff",
     "button.hoverBackground": "#674fd1",
     "button.secondaryBackground": "#474747",
     "button.secondaryForeground": "#a7a7a7",
@@ -49,7 +49,7 @@
     "input.placeholderForeground": "#878787",
     "inputOption.activeBackground": "#755ade",
     "inputOption.activeBorder": "#00000000",
-    "inputOption.activeForeground": "#ffd8ff",
+    "inputOption.activeForeground": "#ffdaff",
     "inputOption.hoverBackground": "#575757",
     "keybindingLabel.background": "#373737",
     "keybindingLabel.border": "#00000000",
@@ -107,7 +107,7 @@
     "statusBarItem.hoverBackground": "#37373799",
     "statusBarItem.prominentBackground": "#37373799",
     "statusBarItem.remoteHoverBackground": "#6a51d4",
-    "statusBarItem.remoteHoverForeground": "#ffd8ff",
+    "statusBarItem.remoteHoverForeground": "#ffdaff",
     "tab.activeBackground": "#755ade14",
     "tab.activeBorderTop": "#755ade",
     "tab.activeForeground": "#979797",
@@ -140,7 +140,7 @@
       "foreground": "#389fad"
     },
     "function": {
-      "foreground": "#7c89f0"
+      "foreground": "#8d85f0"
     },
     "interface": {
       "foreground": "#bf8286"
@@ -149,7 +149,7 @@
       "foreground": "#c27cb3"
     },
     "method": {
-      "foreground": "#7c89f0"
+      "foreground": "#8d85f0"
     },
     "namespace": {
       "foreground": "#c28455"
@@ -316,7 +316,7 @@
         "source.python meta.function-call.generic.python"
       ],
       "settings": {
-        "foreground": "#7c89f0"
+        "foreground": "#8d85f0"
       }
     },
     {
@@ -557,7 +557,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#7c89f0"
+        "foreground": "#8d85f0"
       }
     },
     {

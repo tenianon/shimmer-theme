@@ -1,5 +1,12 @@
 # Change Log
 
+## v0.1.2
+
+### fix
+
+- `function` and `method` colors changed from `#7c89f0` -> `#8d85f0`
+- Common `foreground` increase brightness
+
 ## v0.1.1
 
 ### Fix

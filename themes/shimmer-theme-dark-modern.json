@@ -157,7 +157,7 @@
       "foreground": "#389fad"
     },
     "function": {
-      "foreground": "#7c89f0"
+      "foreground": "#8d85f0"
     },
     "interface": {
       "foreground": "#bf8286"
@@ -166,7 +166,7 @@
       "foreground": "#c27cb3"
     },
     "method": {
-      "foreground": "#7c89f0"
+      "foreground": "#8d85f0"
     },
     "namespace": {
       "foreground": "#c28455"
@@ -333,7 +333,7 @@
         "source.python meta.function-call.generic.python"
       ],
       "settings": {
-        "foreground": "#7c89f0"
+        "foreground": "#8d85f0"
       }
     },
     {
@@ -574,7 +574,7 @@
       ],
       "settings": {
         "fontStyle": "bold",
-        "foreground": "#7c89f0"
+        "foreground": "#8d85f0"
       }
     },
     {
