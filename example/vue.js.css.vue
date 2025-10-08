@@ -1,0 +1,334 @@
+<script setup>
+import { ref } from 'vue';
+
+class A {}
+class B extends A {}
+
+</script>
+<template>
+  <div>vue</div>
+  <vue-component></vue-component>
+  <VueComponent></VueComponent>
+</template>
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  color-scheme: light dark;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f06, #4a90e2);
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit);
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--spacing-unit);
+}
+
+.card {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  container-type: inline-size;
+  container-name: card;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/image.jpg');
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: multiply;
+  opacity: 0.1;
+}
+
+.card > h2 {
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  margin: 0;
+  padding: var(--spacing-unit);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-unit);
+}
+
+.button {
+  all: unset;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  user-select: none;
+  touch-action: manipulation;
+  will-change: background-color;
+}
+
+.button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.button:is(:hover, :focus-visible) {
+  background-color: color-mix(in srgb, var(--primary-color), black 10%);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  accent-color: var(--primary-color);
+  caret-color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    translate: 0 2rem;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@layer base, components, utilities;
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@container card (min-width: 500px) {
+  .card > h2 {
+    font-size: 3rem;
+  }
+}
+
+dialog[open] {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+::file-selector-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+:has(.alert) {
+  border: 2px solid red;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ul:has(> li:only-child) {
+  padding-left: 2em;
+}
+
+@scope (.form) {
+  input:invalid {
+    border-color: red;
+  }
+}
+
+@supports (aspect-ratio: 1) {
+  .responsive-box {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+}
+
+header {
+  grid-area: header;
+  backdrop-filter: blur(10px) saturate(1.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 1rem;
+  background: hsl(0 0% 95% / 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.content {
+  grid-area: content;
+  overflow-y: auto;
+  padding: 2rem;
+  container-type: size;
+  container-name: content-area;
+}
+
+.accordion {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.accordion[open] {
+  grid-template-rows: 1fr;
+}
+
+.scrollable {
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-padding-top: 2rem;
+  scrollbar-gutter: stable;
+  scroll-snap-type: y mandatory;
+}
+
+.scrollable > * {
+  scroll-snap-align: start;
+}
+
+.img-mask {
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 60%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  mask-composite: exclude;
+}
+
+.select:where(:hover, :focus-visible) {
+  outline: 2px dashed rebeccapurple;
+}
+
+fieldset:disabled * {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.responsive-text {
+  font-size: clamp(1rem, 2vw + 1rem, 3rem);
+}
+
+.motion-safe\:fade-in {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fadeIn 0.4s ease forwards;
+  }
+}
+
+:is(nav, aside) > :not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+input[type='range'] {
+  accent-color: deeppink;
+}
+
+:is(h1, h2, h3, h4, h5, h6):not([data-no-style]) {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@media (width < 600px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@container content-area (min-width: 600px) {
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.wiggle-on-hover:hover {
+  animation: wiggle 0.3s ease-in-out infinite;
+}
+
+.box {
+  view-transition-name: fade-box;
+  contain: layout paint;
+}
+</style>

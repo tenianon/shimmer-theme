@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("./reset.css");
+      @font-face {
+      }
+      @layer base {
+      }
+
+      :root {
+        --primary-color: #3498db;
+        --spacing-unit: 1rem;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        color: red;
+        font-family: system-ui, sans-serif;
+        color-scheme: light dark;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f06, #4a90e2);
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-unit);
+        max-width: 1200px;
+        margin-inline: auto;
+        padding-inline: var(--spacing-unit);
+      }
+
+      .card {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        container-type: inline-size;
+        container-name: card;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        animation: fadeIn 0.6s ease-in-out;
+      }
+
+      .card:hover {
+        transform: scale(1.02);
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("/image.jpg");
+        background-size: cover;
+        background-position: center;
+        mix-blend-mode: multiply;
+        opacity: 0.1;
+      }
+
+      .card > h2 {
+        font-size: clamp(1.5rem, 2vw, 2.5rem);
+        margin: 0;
+        padding: var(--spacing-unit);
+      }
+
+      .grid:first-child(2) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-unit);
+      }
+
+      .button > :nth-child(even) {
+        all: unset;
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 0.75em 1.5em;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        user-select: none;
+        touch-action: manipulation;
+        will-change: background-color;
+      }
+
+      .button:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+      }
+
+      .button:is(:hover, :focus-visible) {
+        background-color: color-mix(in srgb, var(--primary-color), black 10%);
+      }
+
+      .input {
+        display: block;
+        width: 100%;
+        padding: 0.5em;
+        font: inherit;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        accent-color: var(--primary-color);
+        caret-color: var(--primary-color);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          translate: 0 2rem;
+        }
+        to {
+          opacity: 1;
+          translate: 0 0;
+        }
+      }
+
+      @layer base, components, utilities;
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+
+      @container card (min-width: 500px) {
+        .card > h2 {
+          font-size: 3rem;
+        }
+      }
+
+      dialog[open] {
+        animation: fadeIn 0.3s ease forwards;
+      }
+
+      ::file-selector-button {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        cursor: pointer;
+      }
+
+      :has(.alert) {
+        border: 2px solid red;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      ul:has(> li:only-child) {
+        padding-left: 2em;
+      }
+
+      @scope (.form) {
+        input:invalid {
+          border-color: red;
+        }
+      }
+
+      @supports (aspect-ratio: 1) {
+        .responsive-box {
+          aspect-ratio: 16 / 9;
+        }
+      }
+
+      main {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "content"
+          "footer";
+        grid-template-rows: auto 1fr auto;
+        height: 100dvh;
+      }
+
+      header {
+        grid-area: header;
+        backdrop-filter: blur(10px) saturate(1.2);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      footer {
+        grid-area: footer;
+        text-align: center;
+        padding: 1rem;
+        background: hsl(0 0% 95% / 0.6);
+        backdrop-filter: blur(5px);
+      }
+
+      .content {
+        grid-area: content;
+        overflow-y: auto;
+        padding: 2rem;
+        container-type: size;
+        container-name: content-area;
+      }
+
+      .accordion {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows 0.3s ease;
+      }
+
+      .accordion[open] {
+        grid-template-rows: 1fr;
+      }
+
+      .scrollable {
+        overflow: auto;
+        overscroll-behavior: contain;
+        scroll-padding-top: 2rem;
+        scrollbar-gutter: stable;
+        scroll-snap-type: y mandatory;
+      }
+
+      .scrollable > * {
+        scroll-snap-align: start;
+      }
+
+      .img-mask {
+        -webkit-mask-image: radial-gradient(
+          circle at center,
+          black 60%,
+          transparent 100%
+        );
+        mask-image: radial-gradient(
+          circle at center,
+          black 60%,
+          transparent 100%
+        );
+        mask-composite: exclude;
+      }
+
+      .select:where(:hover, :focus-visible) {
+        outline: 2px dashed rebeccapurple;
+      }
+
+      fieldset:disabled * {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .text-balance {
+        text-wrap: balance;
+      }
+
+      .text-pretty {
+        text-wrap: pretty;
+      }
+
+      @font-face {
+        font-family: "Inter";
+        src: url("/fonts/inter.woff2") format("woff2");
+        font-weight: 100 900;
+        font-display: swap;
+      }
+
+      .responsive-text {
+        font-size: clamp(1rem, 2vw + 1rem, 3rem);
+      }
+
+      .motion-safe\:fade-in {
+        @media (prefers-reduced-motion: no-preference) {
+          animation: fadeIn 0.4s ease forwards;
+        }
+      }
+
+      :is(nav, aside) > :not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      input[type="range"] {
+        accent-color: deeppink;
+      }
+
+      :is(h1, h2, h3, h4, h5, h6):not([data-no-style]) {
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      @media (width < 600px) {
+        .mobile-only {
+          display: block;
+        }
+
+        .desktop-only {
+          display: none;
+        }
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .tooltip:hover .tooltip-content {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      @container content-area (min-width: 600px) {
+        .content-grid {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          gap: 2rem;
+        }
+      }
+
+      @keyframes wiggle {
+        0%,
+        100% {
+          transform: rotate(-3deg);
+        }
+        50% {
+          transform: rotate(3deg);
+        }
+      }
+
+      .wiggle-on-hover:hover {
+        animation: wiggle 0.3s ease-in-out infinite;
+      }
+
+      .box {
+        view-transition-name: fade-box;
+        contain: layout paint;
+      }
+
+      @media print {
+        .visible-print {
+          display: block !important;
+        }
+        tr.visible-print {
+          display: table-row !important;
+        }
+        th.visible-print,
+        td.visible-print {
+          display: table-cell !important;
+        }
+        .hidden-print {
+          display: none !important;
+        }
+        tr.hidden-print {
+          display: none !important;
+        }
+        th.hidden-print,
+        td.hidden-print {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>this is div</div>
+
+    <hr />
+
+    <input type="text" />
+
+    <p>&nbsp; &sacute; &larr;</p>
+    <script>
+            var path = require("path");
+      import { channel } from "process";
+      import("./module.js").then((mod) => {
+        return mod;
+      });
+
+      var variable = "Hello World";
+      let number = 19009;
+      let float = 19.99;
+      let boolean = true;
+      const symbol2 = Symbol(42);
+      const bigint = BigInt(1e1);
+
+      variable = `${variable} from JS`;
+      number = new Number(999);
+      float = -19.99;
+      number = Infinity;
+      float = NaN;
+      boolean = new Boolean(false);
+
+      const undef = undefined;
+      const nul = null;
+
+      const arr = [
+        "str",
+        999,
+        NaN,
+        Infinity,
+        true,
+        false,
+        undefined,
+        null,
+        { property: "property" },
+        ["str", 999, NaN],
+      ];
+
+      const [first, third] = [10, 20, 30];
+
+      const arr2 = [...arr, 3, 4];
+
+      const msg = boolean ? "yes" : "no";
+
+      const obj = {
+        str: "str",
+        num: 999,
+        bool: true,
+        time: new Date(),
+        arr: ["str", 999, NaN],
+        obj2: { property: 18 },
+        fn: function (arg1) {
+          return arg1;
+        },
+        afn: () => {
+          return "str";
+        },
+      };
+
+      const obj2 = { ...obj, b: 99 };
+
+      const { str: myStr, missing = 42 } = { str: "hello" };
+
+      [10, 20, 30].at(-1);
+
+      "Hello".at(-2);
+
+      Object.hasOwn({ a: 1 }, "a");
+
+      arr.property.getFunction = function () {};
+
+      function baseFn(arg0, arg1, cb) {
+        const localVar = arg0;
+        arg1.name = "new name";
+        arg1.obj = {
+          property: "property",
+        };
+        arg1.arr = ["str", 999, NaN];
+
+        arg1.fn();
+
+        this.obj.property = localVar;
+
+        cb && cb();
+
+        return this;
+      }
+
+      baseFn({})();
+
+      const arrowFn = async (arg = 1) => {
+        const localArgLen = arguments.length;
+        const localArg = arguments[0];
+
+        const sum = localArgLen + arg;
+
+        sum = Math.pow(sum, 2);
+
+        localArg = JSON.stringify(localArg);
+
+        return sum;
+      };
+
+      function* gen() {
+        yield 1;
+        yield 2;
+      }
+
+      class Parent {
+        static var;
+        #secret = 42;
+        static #count = 0;
+
+        constructor(name) {
+          this.name = name;
+          Parent.var = "static var";
+        }
+
+        static staticMethod() {
+          try {
+            throw new Error("Low-level error");
+          } catch (e) {
+            throw new Error("High-level error", { cause: e });
+          }
+        }
+
+        method() {
+          const p = path.basename;
+          Parent.#count += p;
+          return this.#secret;
+        }
+      }
+
+      class Child extends Parent {
+        constructor(name, age) {
+          super(name);
+          this.age = age;
+        }
+      }
+
+      const pmt = new Promise((resolve, reject) => {
+        resolve();
+        reject();
+      })
+        .then(() => {})
+        .catch(() => {})
+        .finally(() => void 0);
+
+      Promise.all([pmt, pmt, pmt]).then(() => {});
+      Promise.resolve().then(() => {});
+
+      await arrowFn(10);
+
+      new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+        123456
+      );
+
+      fs.rewriteFile("path/to/file", "content", (err) => {});
+
+      window.document.body.innerHTML = `<h1>${variable}</h1>`;
+      window.setTimeout(() => {});
+      setInterval(() => {}, 1000);
+      globalThis.setTimeout(() => console.log("OK"));
+      requestAnimationFrame(() => {});
+
+      arr.forEach((item, index, arr) => {
+        console.log(item, index, arr);
+      });
+
+      arr.map((item, index, arr) => {
+        console.log(item, index, arr);
+      });
+
+      labelLoop: for (let i = 0; i < arr.length; i++) {
+        if (i === 3) break labelLoop;
+      }
+
+      for (const element of object) {
+        if (element === 10) {
+        }
+      }
+
+      const val = null ?? "default";
+
+      console.log(user.profile?.name);
+
+      const target = { message: "Hello" };
+      const handler = {
+        get(obj, prop, receiver) {
+          console.log(`get ${prop}`);
+          return Reflect.get(obj, prop, receiver);
+        },
+        set(obj, prop, value, receiver) {
+          console.log(`set ${prop} = ${value}`);
+          return Reflect.set(obj, prop, value, receiver);
+        },
+      };
+      const proxy = new Proxy(target, handler);
+
+      console.log(proxy.message);
+      proxy.newProp = 42;
+
+      /**
+       * link: https://google.com
+       */
+
+      // this example is for testing
+
+      /**
+       * 计算两个数字之和
+       * @namespace MyLib.Utils
+       * @param {number} a - 第一个加数
+       * @returns {number} 两数之和
+       * @class
+       * @typedef {Object} User
+       * @property {number} id - 用户唯一标识
+       * @callback ProcessCallback
+       */
+
+      export const PI = 3.14;
+      export function fn() {}
+      export default class MyClass {}
+      export {
+        channel,
+        number,
+        float,
+        symbol2,
+        bigint,
+        undef,
+        nul,
+        first,
+        third,
+        arr2,
+        msg,
+        obj2,
+        myStr,
+        missing,
+        gen,
+        Child,
+        val,
+        Reflect,
+      };
+
+      module.exports.helper = {
+        PI,
+        fn,
+        MyClass,
+        channel,
+        number,
+        float,
+      };
+
+      exports = module.exports = {
+        apiKey: "12345",
+        apiUrl: "https://api.example.com",
+      };
+    </script>
+  </body>
+</html>

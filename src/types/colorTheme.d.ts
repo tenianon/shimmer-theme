@@ -1,5 +1,5 @@
 // Auto-generated from VS Code schemas using custom parser
-// Generated at: 2025/10/9 04:51:26
+// Generated at: 2025/10/9 05:21:59
 // Sources:
 //   - vscode://schemas/color-theme
 //   - vscode://schemas/token-styling
@@ -145,12 +145,24 @@ declare interface WorkbenchColors {
 	'chat.avatarBackground'?: string
 	/** 聊天头像的前景色 */
 	'chat.avatarForeground'?: string
+	/** Chat checkpoint separator color */
+	'chat.checkpointSeparator'?: string
 	/** 已编辑文件列表中聊天编辑文件的前景色 */
 	'chat.editedFileForeground'?: string
+	/** 在聊天代码块药丸形状中添加了行的前景色 */
+	'chat.linesAddedForeground'?: string
+	/** 移除了聊天代码块药丸形状中的行前景色 */
+	'chat.linesRemovedForeground'?: string
 	/** 聊天请求的背景色 */
 	'chat.requestBackground'?: string
 	/** 聊天请求的边框颜色 */
 	'chat.requestBorder'?: string
+	/** 聊天请求气泡的背景色 */
+	'chat.requestBubbleBackground'?: string
+	/** 鼠标悬停时聊天请求气泡的背景色 */
+	'chat.requestBubbleHoverBackground'?: string
+	/** 聊天请求气泡中代码块的边框颜色 */
+	'chat.requestCodeBorder'?: string
 	/** 聊天斜线命令的背景色 */
 	'chat.slashCommandBackground'?: string
 	/** 聊天斜线命令的前景色 */
@@ -159,6 +171,10 @@ declare interface WorkbenchColors {
 	'checkbox.background'?: string
 	/** 复选框小部件的边框颜色 */
 	'checkbox.border'?: string
+	/** 变暗的复选框的背景 */
+	'checkbox.disabled.background'?: string
+	/** 变暗的复选框的前景 */
+	'checkbox.disabled.foreground'?: string
 	/** 复选框小部件的前景色 */
 	'checkbox.foreground'?: string
 	/** 选择复选框小组件所在的元素时该小组件的背景色 */
@@ -495,6 +511,8 @@ declare interface WorkbenchColors {
 	'editorGroupHeader.tabsBorder'?: string
 	/** 编辑器导航线中已插入行的背景颜色 */
 	'editorGutter.addedBackground'?: string
+	/** 编辑器导航线中已插入行的次要背景色 */
+	'editorGutter.addedSecondaryBackground'?: string
 	/** 编辑器导航线的背景色。导航线包括边缘符号和行号 */
 	'editorGutter.background'?: string
 	/** 编辑器装订线中评论字形的装饰颜色 */
@@ -505,6 +523,8 @@ declare interface WorkbenchColors {
 	'editorGutter.commentUnresolvedGlyphForeground'?: string
 	/** 编辑器导航线中被删除行的背景颜色 */
 	'editorGutter.deletedBackground'?: string
+	/** 编辑器导航线中已删除行的次要背景色 */
+	'editorGutter.deletedSecondaryBackground'?: string
 	/** 编辑器装订线中折叠控件的颜色 */
 	'editorGutter.foldingControlForeground'?: string
 	/** 用于装订线项目背景的编辑器装订线装饰颜色。此颜色应不透明 */
@@ -513,6 +533,8 @@ declare interface WorkbenchColors {
 	'editorGutter.itemGlyphForeground'?: string
 	/** 编辑器导航线中被修改行的背景颜色 */
 	'editorGutter.modifiedBackground'?: string
+	/** 编辑器导航线中已修改行的次要背景色 */
+	'editorGutter.modifiedSecondaryBackground'?: string
 	/** 如果设置，编辑器中提示的双下划线颜色 */
 	'editorHint.border'?: string
 	/** 编辑器中提示波浪线的前景色 */
@@ -665,6 +687,8 @@ declare interface WorkbenchColors {
 	'editorStickyScroll.border'?: string
 	/**  编辑器中粘滞滚动的阴影颜色 */
 	'editorStickyScroll.shadow'?: string
+	/** 编辑器中粘滞滚动的装订线部件的背景色 */
+	'editorStickyScrollGutter.background'?: string
 	/** 在编辑器中悬停时粘滞滚动的背景色 */
 	'editorStickyScrollHover.background'?: string
 	/** 建议小组件的背景色 */
@@ -805,6 +829,20 @@ declare interface WorkbenchColors {
 	focusBorder?: string
 	/** 整体前景色。此颜色仅在不被组件覆盖时适用 */
 	foreground?: string
+	/** 仪表背景色 */
+	'gauge.background'?: string
+	/** 仪表边框颜色 */
+	'gauge.border'?: string
+	/** 仪表错误背景色 */
+	'gauge.errorBackground'?: string
+	/** 仪表错误前景色 */
+	'gauge.errorForeground'?: string
+	/** 仪表前景色 */
+	'gauge.foreground'?: string
+	/** 仪表警告背景色 */
+	'gauge.warningBackground'?: string
+	/** 仪表警告前景色 */
+	'gauge.warningForeground'?: string
 	/** 追溯编辑器修饰的颜色 */
 	'git.blame.editorDecorationForeground'?: string
 	/** 已添加资源的颜色 */
@@ -853,19 +891,19 @@ declare interface WorkbenchColors {
 	'inlineEdit.gutterIndicator.background'?: string
 	/** 主要内联编辑装订线指示器的背景色 */
 	'inlineEdit.gutterIndicator.primaryBackground'?: string
-	/** Border color for the primary inline edit gutter indicator */
+	/** 主要内联编辑装订线指示器的边框颜色 */
 	'inlineEdit.gutterIndicator.primaryBorder'?: string
 	/** 主要内联编辑装订线指示器的前景色 */
 	'inlineEdit.gutterIndicator.primaryForeground'?: string
 	/** 辅助内联编辑装订线指示器的背景色 */
 	'inlineEdit.gutterIndicator.secondaryBackground'?: string
-	/** Border color for the secondary inline edit gutter indicator */
+	/** 辅助内联编辑装订线指示器的边框颜色 */
 	'inlineEdit.gutterIndicator.secondaryBorder'?: string
 	/** 辅助内联编辑装订线指示器的前景色 */
 	'inlineEdit.gutterIndicator.secondaryForeground'?: string
 	/** 成功的内联编辑装订线指示器的背景色 */
 	'inlineEdit.gutterIndicator.successfulBackground'?: string
-	/** Border color for the successful inline edit gutter indicator */
+	/** 成功内联编辑装订线指示器的边框颜色 */
 	'inlineEdit.gutterIndicator.successfulBorder'?: string
 	/** 成功内联编辑装订线指示器的前景色 */
 	'inlineEdit.gutterIndicator.successfulForeground'?: string
@@ -885,9 +923,9 @@ declare interface WorkbenchColors {
 	'inlineEdit.originalChangedLineBackground'?: string
 	/** 内联编辑的原始文本中已更改文本的覆盖颜色 */
 	'inlineEdit.originalChangedTextBackground'?: string
-	/** Modified border color for the inline edits widget when tab will accept it */
+	/** 按 Tab 键接受它时，内联编辑小组件修改后的边框颜色 */
 	'inlineEdit.tabWillAcceptModifiedBorder'?: string
-	/** Original border color for the inline edits widget over the original text when tab will accept it */
+	/** 按 Tab 键接受它时，原始文本上方内联编辑小组件的原始边框颜色 */
 	'inlineEdit.tabWillAcceptOriginalBorder'?: string
 	/** 输入框背景色 */
 	'input.background'?: string
@@ -995,6 +1033,8 @@ declare interface WorkbenchColors {
 	'listFilterWidget.outline'?: string
 	/** 列表和树中类型筛选器小组件的阴影颜色 */
 	'listFilterWidget.shadow'?: string
+	/** The icon color for mcp starred */
+	'mcpIcon.starForeground'?: string
 	/** 菜单项的背景颜色 */
 	'menu.background'?: string
 	/** 菜单的边框颜色 */
@@ -1213,6 +1253,8 @@ declare interface WorkbenchColors {
 	'peekViewEditorGutter.background'?: string
 	/** 速览视图编辑器中粘滞滚动的背景色 */
 	'peekViewEditorStickyScroll.background'?: string
+	/** 速览视图编辑器中粘滞滚动的装订线部件的背景色 */
+	'peekViewEditorStickyScrollGutter.background'?: string
 	/** 速览视图结果列表背景色 */
 	'peekViewResult.background'?: string
 	/** 速览视图结果列表中文件节点的前景色 */
@@ -1278,6 +1320,30 @@ declare interface WorkbenchColors {
 	'radio.inactiveForeground'?: string
 	/** 悬停时非活动单选选项的背景色 */
 	'radio.inactiveHoverBackground'?: string
+	/** 已添加资源的颜色 */
+	'remoteHub.decorations.addedForegroundColor'?: string
+	/** 存在冲突的资源的颜色 */
+	'remoteHub.decorations.conflictForegroundColor'?: string
+	/** 已删除资源的颜色 */
+	'remoteHub.decorations.deletedForegroundColor'?: string
+	/** 已忽略资源的颜色 */
+	'remoteHub.decorations.ignoredResourceForeground'?: string
+	/** 传入的已添加资源的颜色 */
+	'remoteHub.decorations.incomingAddedForegroundColor'?: string
+	/** 传入的已删除资源的颜色 */
+	'remoteHub.decorations.incomingDeletedForegroundColor'?: string
+	/** 传入修改的资源的颜色 */
+	'remoteHub.decorations.incomingModifiedForegroundColor'?: string
+	/** 传入的重命名资源的颜色 */
+	'remoteHub.decorations.incomingRenamedForegroundColor'?: string
+	/** 已修改资源的颜色 */
+	'remoteHub.decorations.modifiedForegroundColor'?: string
+	/** 可能发生冲突的资源的颜色 */
+	'remoteHub.decorations.possibleConflictForegroundColor'?: string
+	/** 子模块资源的颜色 */
+	'remoteHub.decorations.submoduleForegroundColor'?: string
+	/** 具有未提交更改的工作区存储库的颜色 */
+	'remoteHub.decorations.workspaceRepositoriesView.hasUncommittedChangesForegroundColor'?: string
 	/** 活动框格的边框颜色 */
 	'sash.hoverBorder'?: string
 	/** 源代码管理图前景色(1) */
@@ -1674,22 +1740,40 @@ declare interface WorkbenchColors {
 	'terminalStickyScrollHover.background'?: string
 	/** 别名图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.aliasForeground'?: string
-	/** The foreground color for an argument icon. These icons will appear in the terminal suggest widget */
+	/** 参数图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.argumentForeground'?: string
-	/** The foreground color for a file icon. These icons will appear in the terminal suggest widget */
+	/** The foreground color for a branch icon. These icons will appear in the terminal suggest widget */
+	'terminalSymbolIcon.branchForeground'?: string
+	/** The foreground color for a commit icon. These icons will appear in the terminal suggest widget */
+	'terminalSymbolIcon.commitForeground'?: string
+	/** 文件图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.fileForeground'?: string
 	/** 标志图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.flagForeground'?: string
-	/** The foreground color for a folder icon. These icons will appear in the terminal suggest widget */
+	/** 文件夹图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.folderForeground'?: string
-	/** The foreground color for an inline suggestion icon. These icons will appear in the terminal suggest widget */
+	/** 内联建议图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.inlineSuggestionForeground'?: string
-	/** The foreground color for a method icon. These icons will appear in the terminal suggest widget */
+	/** 方法图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.methodForeground'?: string
-	/** The foreground color for an option icon. These icons will appear in the terminal suggest widget */
+	/** 选项图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.optionForeground'?: string
-	/** The foreground color for an enum member icon. These icons will appear in the terminal suggest widget */
+	/** 枚举成员图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.optionValueForeground'?: string
+	/** The foreground color for a completed pull request icon. These icons will appear in the terminal suggest widget */
+	'terminalSymbolIcon.pullRequestDoneForeground'?: string
+	/** The foreground color for a pull request icon. These icons will appear in the terminal suggest widget */
+	'terminalSymbolIcon.pullRequestForeground'?: string
+	/** The foreground color for a remote icon. These icons will appear in the terminal suggest widget */
+	'terminalSymbolIcon.remoteForeground'?: string
+	/** The foreground color for a stash icon. These icons will appear in the terminal suggest widget */
+	'terminalSymbolIcon.stashForeground'?: string
+	/** 符号链接文件图标的前景色。这些图标将显示在终端建议小组件中 */
+	'terminalSymbolIcon.symbolicLinkFileForeground'?: string
+	/** 符号链接文件夹图标的前景色。这些图标将显示在终端建议小组件中 */
+	'terminalSymbolIcon.symbolicLinkFolderForeground'?: string
+	/** The foreground color for a tag icon. These icons will appear in the terminal suggest widget */
+	'terminalSymbolIcon.tagForeground'?: string
 	/** 指明执行计数的徽章的背景 */
 	'testing.coverCountBadgeBackground'?: string
 	/** 指明执行计数的徽章的前景色 */
@@ -1831,6 +1915,10 @@ declare interface SemanticTokenColors {
 	'*.deprecated'?: SemanticTokenStyle
 	/** 用于文档中引用的样式。 */
 	'*.documentation'?: SemanticTokenStyle
+	/** 用于全局符号的样式。 */
+	'*.global'?: SemanticTokenStyle
+	/** 用于本地符号的样式。 */
+	'*.local'?: SemanticTokenStyle
 	/** 用于写入访问的样式。 */
 	'*.modification'?: SemanticTokenStyle
 	/** 用于只读符号的样式。 */
@@ -1839,8 +1927,12 @@ declare interface SemanticTokenColors {
 	'*.static'?: SemanticTokenStyle
 	/** 类样式。 */
 	class?: SemanticTokenStyle
+	/** C++/CLI 属性的样式。 */
+	cliProperty?: SemanticTokenStyle
 	/** 注释的样式。 */
 	comment?: SemanticTokenStyle
+	/** C++ 用户定义文本的样式。 */
+	customLiteral?: SemanticTokenStyle
 	/** 修饰器和注释的样式。 */
 	decorator?: SemanticTokenStyle
 	/** 枚举的样式。 */
@@ -1851,6 +1943,8 @@ declare interface SemanticTokenColors {
 	event?: SemanticTokenStyle
 	/** 函数样式 */
 	function?: SemanticTokenStyle
+	/** C++/CLI 泛型类型的样式。 */
+	genericType?: SemanticTokenStyle
 	/** 接口样式。 */
 	interface?: SemanticTokenStyle
 	/** 关键字的样式。 */
@@ -1861,28 +1955,46 @@ declare interface SemanticTokenColors {
 	macro?: SemanticTokenStyle
 	/** 成员函数的样式 */
 	member?: SemanticTokenStyle
+	/** C++ 重载运算符成员函数的样式。 */
+	memberOperatorOverload?: SemanticTokenStyle
 	/** 成员(成员函数)的样式 */
 	method?: SemanticTokenStyle
 	/** 命名空间的样式。 */
 	namespace?: SemanticTokenStyle
+	/** C++ `new` 或 `delete` 运算符的样式。 */
+	newOperator?: SemanticTokenStyle
 	/** 数字样式。 */
 	number?: SemanticTokenStyle
+	/** C++ 用户定义文本数字的样式。 */
+	numberLiteral?: SemanticTokenStyle
 	/** 运算符的样式。 */
 	operator?: SemanticTokenStyle
+	/** C++ 重载运算符的样式。 */
+	operatorOverload?: SemanticTokenStyle
 	/** 参数样式。 */
 	parameter?: SemanticTokenStyle
 	/** 属性的样式。 */
 	property?: SemanticTokenStyle
+	/** C++/CLI 引用类型的样式。 */
+	referenceType?: SemanticTokenStyle
 	/** 表达式的样式。 */
 	regexp?: SemanticTokenStyle
 	/** 字符串的样式。 */
 	string?: SemanticTokenStyle
+	/** C++ 用户定义文本字符串的样式。 */
+	stringLiteral?: SemanticTokenStyle
 	/** 结构样式。 */
 	struct?: SemanticTokenStyle
+	/** C++ 模板函数的样式。 */
+	templateFunction?: SemanticTokenStyle
+	/** C++ 模板类型的样式。 */
+	templateType?: SemanticTokenStyle
 	/** 类型的样式。 */
 	type?: SemanticTokenStyle
 	/** 类型参数的样式。 */
 	typeParameter?: SemanticTokenStyle
+	/** C++/CLI 值类型的样式。 */
+	valueType?: SemanticTokenStyle
 	/** 变量的样式。 */
 	variable?: SemanticTokenStyle
 }
