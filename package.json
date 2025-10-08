@@ -31,8 +31,6 @@
 		"@types/vscode": "^1.104.0",
 		"@vscode/vsce": "^3.6.2",
 		"chroma-js": "^3.1.2",
-		"globals": "^16.4.0",
-		"json-schema-to-typescript-lite": "^15.0.0",
 		"rolldown": "1.0.0-beta.41",
 		"tsx": "^4.20.6"
 	}
