@@ -146,7 +146,7 @@ export const getWorkbenchColors = (
 
 export const getWorkbenchBlockConfig = (
 	color: Color = baseBlockColor(),
-): WorkbenchColors => {
+): Theme['colors'] => {
 	const baseBorderColor = color['color3.50']
 
 	return {

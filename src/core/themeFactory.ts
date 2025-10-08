@@ -2,7 +2,7 @@ import chroma from 'chroma-js'
 
 import { mergedArray } from '../utils'
 
-export function themeFactory(config: Theme): Theme[] {
+export function themeFactory(config: Theme) {
 	const themeList: Theme[] = []
 
 	const type = config.type
