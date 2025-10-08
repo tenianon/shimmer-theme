@@ -9,10 +9,6 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "extractorWorkbenchColorsSchemaTypes.run",
-				"title": "Extractor Workbench Colors Schema Types"
-			},
-			{
 				"command": "parserColorTheme.run",
 				"title": "Generate Color Theme Types (Parser Color Theme)"
 			}
