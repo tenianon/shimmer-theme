@@ -10,7 +10,7 @@
 		"commands": [
 			{
 				"command": "parserColorTheme.run",
-				"title": "Generate Color Theme Types (Parser Color Theme)"
+				"title": "Generate Color Theme Types"
 			}
 		]
 	},
