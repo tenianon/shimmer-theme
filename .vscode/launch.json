@@ -6,12 +6,16 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Extension",
+			"name": "Themes",
 			"type": "extensionHost",
 			"request": "launch",
-			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}"
-			]
+			"args": ["--extensionDevelopmentPath=${workspaceFolder}/build"]
+		},
+    {
+			"name": "Extensions",
+			"type": "extensionHost",
+			"request": "launch",
+			"args": ["--extensionDevelopmentPath=${workspaceFolder}"]
 		}
 	]
 }

@@ -1,115 +1,43 @@
 {
-  "name": "shimmer-theme",
-  "version": "0.1.2",
-  "displayName": "Shimmer Theme",
-  "description": "A theme may be comfortable",
-  "repository": {
-    "type": "github",
-    "url": "https://github.com/tenianon/shimmer-theme"
-  },
-  "homepage": "https://github.com/tenianon/shimmer-theme/blob/main/README.md",
-  "author": {
-    "name": "Nian"
-  },
-  "publisher": "Nian",
-  "categories": [
-    "Themes"
-  ],
-  "keywords": [
-    "theme",
-    "dark"
-  ],
-  "icon": "icon.png",
-  "engines": {
-    "vscode": "^1.85.0"
-  },
-  "contributes": {
-    "themes": [
-      {
-        "label": "Shimmer Theme Dark Melancholy",
-        "path": "./themes/shimmer-theme-dark-melancholy.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Melancholy 05",
-        "path": "./themes/shimmer-theme-dark-melancholy_5.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Melancholy 10",
-        "path": "./themes/shimmer-theme-dark-melancholy_10.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Melancholy Block",
-        "path": "./themes/shimmer-theme-dark-melancholy-block.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Melancholy Block 05",
-        "path": "./themes/shimmer-theme-dark-melancholy-block_5.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Melancholy Block 10",
-        "path": "./themes/shimmer-theme-dark-melancholy-block_10.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral -2",
-        "path": "./themes/shimmer-theme-dark-neutral_-2.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral",
-        "path": "./themes/shimmer-theme-dark-neutral.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral 05",
-        "path": "./themes/shimmer-theme-dark-neutral_5.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral 10",
-        "path": "./themes/shimmer-theme-dark-neutral_10.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral Block -2",
-        "path": "./themes/shimmer-theme-dark-neutral-block_-2.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral Block",
-        "path": "./themes/shimmer-theme-dark-neutral-block.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral Block 05",
-        "path": "./themes/shimmer-theme-dark-neutral-block_5.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Neutral Block 10",
-        "path": "./themes/shimmer-theme-dark-neutral-block_10.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Modern",
-        "path": "./themes/shimmer-theme-dark-modern.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Modern 05",
-        "path": "./themes/shimmer-theme-dark-modern_5.json",
-        "uiTheme": "vs-dark"
-      },
-      {
-        "label": "Shimmer Theme Dark Modern 10",
-        "path": "./themes/shimmer-theme-dark-modern_10.json",
-        "uiTheme": "vs-dark"
-      }
-    ]
-  }
+	"name": "shimmer-theme",
+	"version": "0.1.2",
+	"description": "A theme may be comfortable",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.85.0"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "extractorWorkbenchColorsSchemaTypes.run",
+				"title": "Extractor Workbench Colors Schema Types"
+			},
+			{
+				"command": "parserColorTheme.run",
+				"title": "Generate Color Theme Types (Parser Color Theme)"
+			}
+		]
+	},
+	"main": "dist/index.cjs",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"build": "tsx src/index.ts",
+		"dev:extension": "rolldown src/extension/index.ts --watch --file dist/index.cjs --config rolldown.config.js",
+		"build:extension": "rolldown src/extension/index.ts --file dist/index.cjs --config rolldown.config.js",
+		"biome:format": "biome format --write src",
+		"biome:check": "biome check --write src",
+		"package": "cd build && vsce package --no-dependencies --out ../"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.5",
+		"@types/chroma-js": "^3.1.1",
+		"@types/node": "^24.7.0",
+		"@types/vscode": "^1.104.0",
+		"@vscode/vsce": "^3.6.2",
+		"chroma-js": "^3.1.2",
+		"globals": "^16.4.0",
+		"json-schema-to-typescript-lite": "^15.0.0",
+		"rolldown": "1.0.0-beta.41",
+		"tsx": "^4.20.6"
+	}
 }
