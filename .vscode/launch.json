@@ -9,9 +9,12 @@
 			"name": "Themes",
 			"type": "extensionHost",
 			"request": "launch",
-			"args": ["--extensionDevelopmentPath=${workspaceFolder}/build"]
+			"args": [
+				"${workspaceFolder}/example",
+				"--extensionDevelopmentPath=${workspaceFolder}/build"
+			]
 		},
-    {
+		{
 			"name": "Extensions",
 			"type": "extensionHost",
 			"request": "launch",
