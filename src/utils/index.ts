@@ -1,2 +1,2 @@
-export * from './merged'
+export * from './mergedTextmateColors'
 export * from './pick'

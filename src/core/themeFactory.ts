@@ -1,6 +1,6 @@
 import chroma from 'chroma-js'
 
-import { mergedArray } from '../utils'
+import { mergedTextmateColors } from '../utils'
 
 export function themeFactory(config: Theme) {
 	const themeList: Theme[] = []
@@ -11,7 +11,9 @@ export function themeFactory(config: Theme) {
 
 	const uiTheme = config.uiTheme
 
-	config.brightness?.forEach((level) => {
+	config.brightness = config.brightness ?? [0]
+
+	config.brightness.forEach((level) => {
 		let name = `shimmer-theme-${config.type}-${config.name}`
 
 		let label = name
@@ -28,7 +30,7 @@ export function themeFactory(config: Theme) {
 		) as Theme['semanticTokenColors']
 
 		const tokenColors = structuredClone(
-			mergedArray(config.tokenColors || []),
+			mergedTextmateColors(config.tokenColors),
 		) as Theme['tokenColors']
 
 		if (level) {

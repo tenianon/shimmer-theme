@@ -9,9 +9,8 @@ export function registerParserColorThemeCommand(context: ExtensionContext) {
 		'parserColorTheme.run',
 		async () => {
 			try {
-				window.showInformationMessage('开始解析 VS Code Schema...')
+				window.showInformationMessage('Start VS Code Schema...')
 
-				// 读取各个 schema 文件
 				const tokenStylingUri = Uri.parse('vscode://schemas/token-styling')
 				const tokenStylingDoc =
 					await workspace.openTextDocument(tokenStylingUri)
@@ -45,7 +44,6 @@ export function registerParserColorThemeCommand(context: ExtensionContext) {
 					generateTextmateColorsType(textmateColorsSchema)
 				const themeType = generateColorThemeType(colorThemeSchema)
 
-				// 组合类型定义
 				const banner = `// Auto-generated from VS Code schemas using custom parser
 // Generated at: ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}
 // Sources:
@@ -66,7 +64,6 @@ export function registerParserColorThemeCommand(context: ExtensionContext) {
 					'\n' +
 					themeType
 
-				// 保存到文件
 				const projectRoot = join(__dirname, '..')
 				const typesDir = join(projectRoot, 'src', 'types')
 
@@ -93,7 +90,6 @@ export function registerParserColorThemeCommand(context: ExtensionContext) {
 	context.subscriptions.push(disposable)
 }
 
-// 递归解析 schema 中的 $ref 引用
 function resolveRef(obj: any, schema: any): any {
 	if (!obj.$ref) {
 		return obj
@@ -105,7 +101,6 @@ function resolveRef(obj: any, schema: any): any {
 		refDef = refDef?.[pathKey]
 	}
 
-	// 递归解析，防止循环引用
 	if (refDef?.$ref && refDef.$ref !== obj.$ref) {
 		return resolveRef(refDef, schema)
 	}
@@ -113,7 +108,6 @@ function resolveRef(obj: any, schema: any): any {
 	return refDef || obj
 }
 
-// 生成 SemanticTokenStyle 类型
 function generateSemanticTokenStyleType(schema: any): string {
 	const styleDef = schema.definitions?.style || {}
 	const properties = styleDef.properties || {}
@@ -147,7 +141,6 @@ function generateSemanticTokenStyleType(schema: any): string {
 declare type SemanticTokenStyle = string | ${objectType}`
 }
 
-// 生成 WorkbenchColors 类型
 function generateWorkbenchColorsType(schema: any): string {
 	const properties = schema.properties || {}
 	const colorKeys = Object.keys(properties).sort()
@@ -171,7 +164,6 @@ function generateWorkbenchColorsType(schema: any): string {
 	return typeContent
 }
 
-// 生成 SemanticTokenColors 类型
 function generateSemanticTokenColorsType(tokenStylingSchema: any): string {
 	const properties = tokenStylingSchema.properties || {}
 	const tokenKeys = Object.keys(properties).sort()
@@ -193,7 +185,6 @@ function generateSemanticTokenColorsType(tokenStylingSchema: any): string {
 	return typeContent
 }
 
-// 生成 TokenColor 类型
 function generateTextmateColorsType(schema: any): string {
 	const tokenColorsDef = schema.items || {}
 	const properties = tokenColorsDef.properties || {}
@@ -232,7 +223,6 @@ function generateTextmateColorsType(schema: any): string {
 	return typeContent
 }
 
-// 生成嵌套对象类型
 function generateObjectType(objDef: any, schema: any, indent: number): string {
 	const properties = objDef.properties || {}
 	if (Object.keys(properties).length === 0) {
@@ -270,7 +260,6 @@ function generateObjectType(objDef: any, schema: any, indent: number): string {
 	return objType
 }
 
-// 生成 Theme 主类型
 function generateColorThemeType(schema: any): string {
 	const properties = schema.properties || {}
 

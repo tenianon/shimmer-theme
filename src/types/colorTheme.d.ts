@@ -1,5 +1,5 @@
 // Auto-generated from VS Code schemas using custom parser
-// Generated at: 2025/10/9 05:21:59
+// Generated at: 2025/12/13 00:17:49
 // Sources:
 //   - vscode://schemas/color-theme
 //   - vscode://schemas/token-styling
@@ -145,7 +145,7 @@ declare interface WorkbenchColors {
 	'chat.avatarBackground'?: string
 	/** 聊天头像的前景色 */
 	'chat.avatarForeground'?: string
-	/** Chat checkpoint separator color */
+	/** 聊天检查点分隔符颜色 */
 	'chat.checkpointSeparator'?: string
 	/** 已编辑文件列表中聊天编辑文件的前景色 */
 	'chat.editedFileForeground'?: string
@@ -167,6 +167,8 @@ declare interface WorkbenchColors {
 	'chat.slashCommandBackground'?: string
 	/** 聊天斜线命令的前景色 */
 	'chat.slashCommandForeground'?: string
+	/** The color of the Chat Management editor splitview sash border */
+	'chatManagement.sashBorder'?: string
 	/** 复选框小部件的背景颜色 */
 	'checkbox.background'?: string
 	/** 复选框小部件的边框颜色 */
@@ -1033,7 +1035,17 @@ declare interface WorkbenchColors {
 	'listFilterWidget.outline'?: string
 	/** 列表和树中类型筛选器小组件的阴影颜色 */
 	'listFilterWidget.shadow'?: string
-	/** The icon color for mcp starred */
+	/** Foreground color for caution alerts in markdown */
+	'markdownAlert.caution.foreground'?: string
+	/** Foreground color for important alerts in markdown */
+	'markdownAlert.important.foreground'?: string
+	/** Foreground color for note alerts in markdown */
+	'markdownAlert.note.foreground'?: string
+	/** Foreground color for tip alerts in markdown */
+	'markdownAlert.tip.foreground'?: string
+	/** Foreground color for warning alerts in markdown */
+	'markdownAlert.warning.foreground'?: string
+	/** 带星标的 mcp 的图标颜色 */
 	'mcpIcon.starForeground'?: string
 	/** 菜单项的背景颜色 */
 	'menu.background'?: string
@@ -1372,6 +1384,8 @@ declare interface WorkbenchColors {
 	'scmGraph.historyItemRefColor'?: string
 	/** 历史记录项远程引用颜色 */
 	'scmGraph.historyItemRemoteRefColor'?: string
+	/** Scrollbar track background color */
+	'scrollbar.background'?: string
 	/** 表示视图被滚动的滚动条阴影 */
 	'scrollbar.shadow'?: string
 	/** 滚动条滑块在被点击时的背景色 */
@@ -1702,7 +1716,7 @@ declare interface WorkbenchColors {
 	'terminal.findMatchHighlightBorder'?: string
 	/** 终端的前景颜色 */
 	'terminal.foreground'?: string
-	/** 终端中其他搜索匹配项的边框颜色 */
+	/** Highlight below the word for which a hover is shown. The color must not be opaque so as not to hide underlying decorations */
 	'terminal.hoverHighlightBackground'?: string
 	/** 终端没有焦点时的选择背景色 */
 	'terminal.inactiveSelectionBackground'?: string
@@ -1742,9 +1756,9 @@ declare interface WorkbenchColors {
 	'terminalSymbolIcon.aliasForeground'?: string
 	/** 参数图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.argumentForeground'?: string
-	/** The foreground color for a branch icon. These icons will appear in the terminal suggest widget */
+	/** 分支图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.branchForeground'?: string
-	/** The foreground color for a commit icon. These icons will appear in the terminal suggest widget */
+	/** 提交图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.commitForeground'?: string
 	/** 文件图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.fileForeground'?: string
@@ -1760,19 +1774,21 @@ declare interface WorkbenchColors {
 	'terminalSymbolIcon.optionForeground'?: string
 	/** 枚举成员图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.optionValueForeground'?: string
-	/** The foreground color for a completed pull request icon. These icons will appear in the terminal suggest widget */
+	/** 已完成拉取请求图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.pullRequestDoneForeground'?: string
-	/** The foreground color for a pull request icon. These icons will appear in the terminal suggest widget */
+	/** 拉取请求图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.pullRequestForeground'?: string
-	/** The foreground color for a remote icon. These icons will appear in the terminal suggest widget */
+	/** 远程图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.remoteForeground'?: string
-	/** The foreground color for a stash icon. These icons will appear in the terminal suggest widget */
+	/** 储藏图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.stashForeground'?: string
+	/** The foreground color for a plaintext suggestion. These icons will appear in the terminal suggest widget */
+	'terminalSymbolIcon.symbolText'?: string
 	/** 符号链接文件图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.symbolicLinkFileForeground'?: string
 	/** 符号链接文件夹图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.symbolicLinkFolderForeground'?: string
-	/** The foreground color for a tag icon. These icons will appear in the terminal suggest widget */
+	/** 标记图标的前景色。这些图标将显示在终端建议小组件中 */
 	'terminalSymbolIcon.tagForeground'?: string
 	/** 指明执行计数的徽章的背景 */
 	'testing.coverCountBadgeBackground'?: string
@@ -1915,10 +1931,6 @@ declare interface SemanticTokenColors {
 	'*.deprecated'?: SemanticTokenStyle
 	/** 用于文档中引用的样式。 */
 	'*.documentation'?: SemanticTokenStyle
-	/** 用于全局符号的样式。 */
-	'*.global'?: SemanticTokenStyle
-	/** 用于本地符号的样式。 */
-	'*.local'?: SemanticTokenStyle
 	/** 用于写入访问的样式。 */
 	'*.modification'?: SemanticTokenStyle
 	/** 用于只读符号的样式。 */
@@ -1927,12 +1939,8 @@ declare interface SemanticTokenColors {
 	'*.static'?: SemanticTokenStyle
 	/** 类样式。 */
 	class?: SemanticTokenStyle
-	/** C++/CLI 属性的样式。 */
-	cliProperty?: SemanticTokenStyle
 	/** 注释的样式。 */
 	comment?: SemanticTokenStyle
-	/** C++ 用户定义文本的样式。 */
-	customLiteral?: SemanticTokenStyle
 	/** 修饰器和注释的样式。 */
 	decorator?: SemanticTokenStyle
 	/** 枚举的样式。 */
@@ -1943,8 +1951,6 @@ declare interface SemanticTokenColors {
 	event?: SemanticTokenStyle
 	/** 函数样式 */
 	function?: SemanticTokenStyle
-	/** C++/CLI 泛型类型的样式。 */
-	genericType?: SemanticTokenStyle
 	/** 接口样式。 */
 	interface?: SemanticTokenStyle
 	/** 关键字的样式。 */
@@ -1955,46 +1961,28 @@ declare interface SemanticTokenColors {
 	macro?: SemanticTokenStyle
 	/** 成员函数的样式 */
 	member?: SemanticTokenStyle
-	/** C++ 重载运算符成员函数的样式。 */
-	memberOperatorOverload?: SemanticTokenStyle
 	/** 成员(成员函数)的样式 */
 	method?: SemanticTokenStyle
 	/** 命名空间的样式。 */
 	namespace?: SemanticTokenStyle
-	/** C++ `new` 或 `delete` 运算符的样式。 */
-	newOperator?: SemanticTokenStyle
 	/** 数字样式。 */
 	number?: SemanticTokenStyle
-	/** C++ 用户定义文本数字的样式。 */
-	numberLiteral?: SemanticTokenStyle
 	/** 运算符的样式。 */
 	operator?: SemanticTokenStyle
-	/** C++ 重载运算符的样式。 */
-	operatorOverload?: SemanticTokenStyle
 	/** 参数样式。 */
 	parameter?: SemanticTokenStyle
 	/** 属性的样式。 */
 	property?: SemanticTokenStyle
-	/** C++/CLI 引用类型的样式。 */
-	referenceType?: SemanticTokenStyle
 	/** 表达式的样式。 */
 	regexp?: SemanticTokenStyle
 	/** 字符串的样式。 */
 	string?: SemanticTokenStyle
-	/** C++ 用户定义文本字符串的样式。 */
-	stringLiteral?: SemanticTokenStyle
 	/** 结构样式。 */
 	struct?: SemanticTokenStyle
-	/** C++ 模板函数的样式。 */
-	templateFunction?: SemanticTokenStyle
-	/** C++ 模板类型的样式。 */
-	templateType?: SemanticTokenStyle
 	/** 类型的样式。 */
 	type?: SemanticTokenStyle
 	/** 类型参数的样式。 */
 	typeParameter?: SemanticTokenStyle
-	/** C++/CLI 值类型的样式。 */
-	valueType?: SemanticTokenStyle
 	/** 变量的样式。 */
 	variable?: SemanticTokenStyle
 }
