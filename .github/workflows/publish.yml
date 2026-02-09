@@ -38,9 +38,11 @@ jobs:
           fi
 
       - name: Publish to VS Code Marketplace
+        continue-on-error: true
         run: cd build && npx @vscode/vsce publish --no-dependencies --pat ${{ secrets.VSCE_TOKEN }}
 
       - name: Publish to Open VSX
+        continue-on-error: true
         run: cd build && npx ovsx publish --no-dependencies --pat ${{ secrets.OVSX_TOKEN }}
 
       - name: Package VSIX
