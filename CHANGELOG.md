@@ -2,7 +2,7 @@
 
 ## v0.1.3
 
-### Changes
+### Tests
 
 Workflow release changes
 
