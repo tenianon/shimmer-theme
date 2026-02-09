@@ -1,0 +1,56 @@
+name: Publish Extension
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Generate themes
+        run: bun run build
+
+      - name: Extract changelog for current version
+        id: changelog
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/}
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          
+          # Extract changelog content for this version
+          awk "/^## $VERSION/,/^## v[0-9]/" CHANGELOG.md | sed '$d' | tail -n +2 > release_notes.md
+          
+          # If empty, use a default message
+          if [ ! -s release_notes.md ]; then
+            echo "Release $VERSION" > release_notes.md
+          fi
+
+      - name: Publish to VS Code Marketplace
+        run: cd build && npx @vscode/vsce publish --no-dependencies --pat ${{ secrets.VSCE_PAT }}
+
+      - name: Publish to Open VSX
+        run: cd build && npx ovsx publish --no-dependencies --pat ${{ secrets.OVSX_PAT }}
+
+      - name: Package VSIX
+        if: always()
+        run: bun run package
+        
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: release_notes.md
+          files: '*.vsix'
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
