@@ -31,15 +31,6 @@ jobs:
           
           # Extract changelog using sed
           sed -n "/^## $VERSION$/,/^## /p" CHANGELOG.md | sed '1d;$d' | sed '/^---$/d' | sed '/^$/N;/^\n$/D' > release_notes.md
-          
-          # Debug: show what was extracted
-          echo "Extracted changelog:"
-          cat release_notes.md
-          
-          # If empty, use a default message
-          if [ ! -s release_notes.md ]; then
-            echo "Release $VERSION" > release_notes.md
-          fi
 
       - name: Publish to VS Code Marketplace
         continue-on-error: true
