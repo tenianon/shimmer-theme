@@ -36,10 +36,10 @@ jobs:
           fi
 
       - name: Publish to VS Code Marketplace
-        run: cd build && npx @vscode/vsce publish --no-dependencies --pat ${{ secrets.VSCE_PAT }}
+        run: cd build && npx @vscode/vsce publish --no-dependencies --pat ${{ secrets.VSCE_TOKEN }}
 
       - name: Publish to Open VSX
-        run: cd build && npx ovsx publish --no-dependencies --pat ${{ secrets.OVSX_PAT }}
+        run: cd build && npx ovsx publish --no-dependencies --pat ${{ secrets.OVSX_TOKEN }}
 
       - name: Package VSIX
         if: always()
