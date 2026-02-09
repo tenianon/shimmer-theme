@@ -6,7 +6,6 @@
 
 Workflow release changes
 
-
 ## v0.1.2
 
 ### Fixed
