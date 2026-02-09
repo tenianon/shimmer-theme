@@ -16,10 +16,10 @@
 	},
 	"main": "dist/index.cjs",
 	"scripts": {
-		"dev": "tsx watch src/index.ts",
-		"build": "tsx src/index.ts",
-		"dev:extension": "rolldown src/extension/index.ts --watch --file dist/index.cjs --config rolldown.config.js",
-		"build:extension": "rolldown src/extension/index.ts --file dist/index.cjs --config rolldown.config.js",
+		"dev": "bun --watch src/index.ts",
+		"build": "bun src/index.ts",
+		"dev:extension": "bun build src/extension/index.ts --outfile dist/index.cjs --watch",
+		"build:extension": "bun build src/extension/index.ts --outfile dist/index.cjs",
 		"biome:format": "biome format --write src",
 		"biome:check": "biome check --write src",
 		"package": "cd build && vsce package --no-dependencies --out ../"
@@ -30,8 +30,6 @@
 		"@types/node": "^24.7.0",
 		"@types/vscode": "^1.104.0",
 		"@vscode/vsce": "^3.6.2",
-		"chroma-js": "^3.1.2",
-		"rolldown": "1.0.0-beta.41",
-		"tsx": "^4.20.6"
+		"chroma-js": "^3.2.0"
 	}
 }

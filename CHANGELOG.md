@@ -2,20 +2,20 @@
 
 ## v0.1.2
 
-### fix
+### Fixed
 
 - `function` and `method` colors changed from `#7c89f0` -> `#8d85f0`
 - Common `foreground` increase brightness
 
 ## v0.1.1
 
-### Fix
+### Fixed
 
 - In `vue` files, `component` colors may display incorrectly under certain conditions. You need to use [Vue (Official)](https://github.com/vuejs/language-tools) version `3.0.2` or higher.
 
 ## v0.1.0
 
-### Fix
+### Fixed
 
 - `class.defaultLibrary` coloring in vue
 
@@ -23,7 +23,7 @@
 
 ## v0.0.9
 
-### Fix
+### Fixed
 
 - The background of `activityBar.background` in the default layout
 
@@ -31,7 +31,7 @@
 
 ## v0.0.8
 
-### Fix
+### Fixed
 
 - README effect image path
 
@@ -39,12 +39,12 @@
 
 ## v0.0.7
 
-### Add
+### Added
 
 - Added `Rust` Code coloring support
 - Added `Dark Modern` theme, Workbench colors based on Vscode Dark Modern
 
-### Fix
+### Fixed
 
 - Close HTML **<[tag] />**  closing tag `/` coloring in `vue`
 
@@ -52,7 +52,7 @@
 
 ## v0.0.6
 
-### Add
+### Added
 
 - The original theme is extended with the theme of `block colors`
 
@@ -60,7 +60,7 @@
 
 - Added `C` `C++` `Go` `Python` `Markdown` Code coloring support
 
-### Fix
+### Fixed
 
 - Fixed a ton of tiny details.
 
@@ -68,10 +68,10 @@
 
 ## v0.0.5
 
-### Fix
+### Fixed
 
 - In the `HTML` file, js `class` semantic coloring
 
-### Change
+### Changed
 
 - `number` and `typeParameter` color

@@ -90,6 +90,7 @@ async function generatePackageJson() {
 	const buildPackageJson = {
 		...pickPackageJson,
 		displayName: 'Shimmer Theme',
+		publisher: 'Nian',
 		author: {
 			name: 'Nian',
 		},
@@ -98,12 +99,11 @@ async function generatePackageJson() {
 			url: 'https://github.com/tenianon/shimmer-theme',
 		},
 		homepage: 'https://github.com/tenianon/shimmer-theme/blob/main/README.md',
-		publisher: 'Nian',
 		categories: ['Themes'],
 		keywords: ['theme', 'dark'],
 		icon: 'icon.png',
 		contributes: {
-			themes: themes,
+			themes,
 		},
 	}
 

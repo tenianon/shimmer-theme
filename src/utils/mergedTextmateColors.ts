@@ -20,7 +20,7 @@ export function mergedTextmateColors(
 		const normalizedScope = normalizeScope(item.scope)
 
 		if (mergedMap.has(key)) {
-			// biome-ignore lint/style/noNonNullAssertion: <explanation>
+			// biome-ignore lint: false
 			const existing = mergedMap.get(key)!
 			existing.scope.push(...normalizedScope)
 		} else {
