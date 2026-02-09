@@ -29,8 +29,8 @@ jobs:
           VERSION=${GITHUB_REF#refs/tags/}
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           
-          # Extract changelog content for this version
-          awk "/^## $VERSION/,/^## v[0-9]/" CHANGELOG.md | sed '$d' | tail -n +2 > release_notes.md
+          # Extract changelog content between current version and next version/separator
+          awk "/^## $VERSION/,/^(## v[0-9]|---$)/" CHANGELOG.md | sed '1d;$d' | sed '/^$/d' > release_notes.md
           
           # If empty, use a default message
           if [ ! -s release_notes.md ]; then
