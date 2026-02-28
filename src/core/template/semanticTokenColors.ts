@@ -146,11 +146,21 @@ export const getSemanticTokenColors = (
 		},
 	}
 
+	const dart: Theme['semanticTokenColors'] = {
+		'annotation:dart': {
+			foreground: baseColor.color8,
+		},
+		'property.annotation:dart': {
+			foreground: semantic.namespace,
+		},
+	}
+
 	return {
 		...defaultSemantic,
 		...c,
 		...cpp,
 		...py,
 		...rs,
+		...dart,
 	}
 }

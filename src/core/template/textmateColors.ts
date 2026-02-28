@@ -911,6 +911,21 @@ export const getTextmateColors = (
 		},
 	]
 
+	const dart: Theme['tokenColors'] = [
+		{
+			scope: ['source.dart'],
+			settings: {
+				foreground: baseColor.color8,
+			},
+		},
+		{
+			scope: ['support.class.dart'],
+			settings: {
+				foreground: semantic.class,
+			},
+		},
+	]
+
 	return [
 		...group,
 		...unicode,
@@ -931,5 +946,6 @@ export const getTextmateColors = (
 		...tsx,
 		...vue,
 		...rust,
+		...dart,
 	]
 }
