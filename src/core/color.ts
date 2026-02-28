@@ -20,7 +20,7 @@ export const baseColor: Color = {
 	primary: '#8565ff',
 }
 
-export const baseBlockColor = (color = baseColor): Color => {
+export const baseBlockColor = (color = baseColor) => {
 	return {
 		...color,
 		'color2.25': chroma.mix(color.color2, color.color3, 0.25, 'rgb').hex(),
@@ -29,7 +29,7 @@ export const baseBlockColor = (color = baseColor): Color => {
 		'color3.25': chroma.mix(color.color3, color.color4, 0.25, 'rgb').hex(),
 		'color3.50': chroma.mix(color.color3, color.color4, 0.5, 'rgb').hex(),
 		'color4.50': chroma.mix(color.color4, color.color5, 0.5, 'rgb').hex(),
-	}
+	} as const
 }
 
 export const baseSemanticColor = (

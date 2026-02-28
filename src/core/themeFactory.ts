@@ -18,7 +18,7 @@ export function themeFactory(config: Theme) {
 
 		let label = name
 			.split('-')
-			.map((s) => s[0].toUpperCase() + s.slice(1))
+			.map((s) => s.charAt(0).toUpperCase() + s.slice(1))
 			.join(' ')
 
 		let colors: Theme['colors'] | undefined = config.colors
@@ -60,10 +60,10 @@ export function themeFactory(config: Theme) {
 			}
 
 			if (tokenColors) {
-				for (let i = 0; i < tokenColors.length; i++) {
-					const foreground = tokenColors[i].settings.foreground
-					if (foreground) {
-						tokenColors[i].settings.foreground = chroma(foreground)
+				for (const tokenColor of tokenColors) {
+					const foreground = tokenColor?.settings.foreground
+					if (foreground && tokenColor) {
+						tokenColor.settings.foreground = chroma(foreground)
 							.brighten(ratio)
 							.hex()
 					}
