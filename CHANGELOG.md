@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.1.4
+
+### Fixed
+
+- `Dart` Code coloring support
+
 ## v0.1.3
 
 ### Tests
