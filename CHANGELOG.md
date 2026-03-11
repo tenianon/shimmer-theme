@@ -4,13 +4,13 @@
 
 ### Fixed
 
-- `Vue` Other html attribute
+- `Vue` other html attribute
 
 ## v0.1.4
 
 ### Fixed
 
-- `Dart` Code coloring support
+- `Dart` code coloring support
 
 ## v0.1.3
 
@@ -59,7 +59,7 @@ Workflow release changes
 
 ### Added
 
-- Added `Rust` Code coloring support
+- Added `Rust` code coloring support
 - Added `Dark Modern` theme, Workbench colors based on Vscode Dark Modern
 
 ### Fixed
