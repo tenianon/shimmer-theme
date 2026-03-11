@@ -349,6 +349,7 @@ export const getTextmateColors = (
 			scope: [
 				'entity.other.attribute-name',
 				'invalid.illegal.character-not-allowed-here.html',
+				'	invalid.deprecated.entity.other.attribute-name.html',
 			],
 			settings: {
 				foreground: base.color8,

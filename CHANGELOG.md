@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.1.5
+
+### Fixed
+
+- `Vue` Other html attribute
+
 ## v0.1.4
 
 ### Fixed

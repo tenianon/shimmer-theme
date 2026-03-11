@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import Comp from './vue.component.vue'
 
 class A {}
 class B extends A {}
@@ -9,6 +10,7 @@ class B extends A {}
   <div>vue</div>
   <vue-component></vue-component>
   <VueComponent></VueComponent>
+  <Comp border/>
 </template>
 <style>
 html,
