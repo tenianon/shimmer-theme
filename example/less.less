@@ -1,7 +1,7 @@
 // 变量
 @primary-color: #3498db;
 @padding: 10px;
-@font-stack: "Helvetica, sans-serif";
+@font-stack: 'Helvetica, sans-serif';
 
 // 嵌套
 .navbar {
@@ -40,7 +40,7 @@
   box-shadow: @x @y @blur @color;
 }
 
-.box[data-attr="attr"] {
+.box[data-attr='attr'] {
   .border {
     width: 1px;
     color: @primary-color;
@@ -99,10 +99,10 @@
 }
 
 // 导入其他 LESS 文件
-@import "variables.less";
-@import (reference) "mixins.less";
-@import (inline) "reset.css";
-@import (less) "styles.less";
+@import 'variables.less';
+@import (reference) 'mixins.less';
+@import (inline) 'reset.css';
+@import (less) 'styles.less';
 
 // 作用域规则
 @color: black;

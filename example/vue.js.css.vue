@@ -1,16 +1,16 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
+
 import Comp from './vue.component.vue'
 
 class A {}
 class B extends A {}
-
 </script>
 <template>
   <div>vue</div>
   <vue-component></vue-component>
   <VueComponent></VueComponent>
-  <Comp border/>
+  <Comp border />
 </template>
 <style>
 html,
@@ -234,11 +234,7 @@ footer {
 }
 
 .img-mask {
-  -webkit-mask-image: radial-gradient(
-    circle at center,
-    black 60%,
-    transparent 100%
-  );
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
   mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
   mask-composite: exclude;
 }

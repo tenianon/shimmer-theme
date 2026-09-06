@@ -1,7 +1,7 @@
 <script setup lang="ts">
 type Foo = {
-  name: string;
-};
+  name: string
+}
 
 type DeepPick<T, K extends string> = K extends `${infer First}.${infer Rest}`
   ? First extends keyof T
@@ -9,24 +9,17 @@ type DeepPick<T, K extends string> = K extends `${infer First}.${infer Rest}`
     : never
   : K extends keyof T
     ? { [P in K]: T[P] }
-    : never;
+    : never
 
-function deepPick<T, K extends string>(
-  obj: T,
-  key: K,
-  value: any,
-  pass: number,
-): DeepPick<T, K> {
-  const a = value | pass;
+function deepPick<T, K extends string>(obj: T, key: K, value: any, pass: number): DeepPick<T, K> {
+  const a = value | pass
 
-  return key.split('.').reduce((acc, key) => acc[key], obj) as DeepPick<T, K>;
+  return key.split('.').reduce((acc, key) => acc[key], obj) as DeepPick<T, K>
 }
 
-const a = 1000000;
-
+const a = 1000000
 
 Array.from('')
-
 </script>
 <template>
   <div>

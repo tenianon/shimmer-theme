@@ -64,7 +64,7 @@ Workflow release changes
 
 ### Fixed
 
-- Close HTML **<[tag] />**  closing tag `/` coloring in `vue`
+- Close HTML **<[tag] />** closing tag `/` coloring in `vue`
 
 ---
 

@@ -1,6 +1,6 @@
 $primary-color: #4caf50;
 $padding: 16px;
-$font-stack: "Roboto", sans-serif;
+$font-stack: 'Roboto', sans-serif;
 
 .navbar {
   background: $primary-color;
@@ -46,7 +46,7 @@ $font-stack: "Roboto", sans-serif;
   background: #fefefe;
 }
 
-.grid[grid-cols="3"] {
+.grid[grid-cols='3'] {
   width: 100% / 3;
   padding: $padding * 2;
   margin: ($padding + 4px);
@@ -114,18 +114,18 @@ $i: 1;
   font-size: rem(24);
 }
 
-@use "sass:color";
-@use "sass:math";
-@use "utils/mixins" as *;
+@use 'sass:color';
+@use 'sass:math';
+@use 'utils/mixins' as *;
 
 .box {
   background: color.adjust($primary-color, $lightness: 10%);
   width: math.div(100%, 3);
 }
 
-@import "reset";
-@import "variables";
-@import "base";
+@import 'reset';
+@import 'variables';
+@import 'base';
 
 %btn-shared {
   padding: 10px 20px;
@@ -151,11 +151,11 @@ $i: 1;
 }
 
 .navbar-light {
-  @include deprecate("`.navbar-light`", "v5.2.0", "v6.0.0", true);
+  @include deprecate('`.navbar-light`', 'v5.2.0', 'v6.0.0', true);
 }
 
 .navbar-dark,
-.navbar[data-bs-theme="dark"] {
+.navbar[data-bs-theme='dark'] {
   // scss-docs-start navbar-dark-css-vars
   --#{$prefix}navbar-color: #{$navbar-dark-color};
   --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};

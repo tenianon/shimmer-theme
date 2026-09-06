@@ -16,7 +16,6 @@
 
 ## 效果图
 
-
 #### Dark Melancholy
 
 <div align="center">
@@ -56,7 +55,6 @@
 ![shimmer-theme-dark-modern.png](https://i.postimg.cc/BJ7DJK0Z/shimmer-theme-dark-modern.png)
 
 </div>
-
 
 ## 建议
 

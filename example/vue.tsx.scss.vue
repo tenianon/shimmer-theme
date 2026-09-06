@@ -5,7 +5,7 @@
 <style lang="scss">
 $primary-color: #4caf50;
 $padding: 16px;
-$font-stack: "Roboto", sans-serif;
+$font-stack: 'Roboto', sans-serif;
 
 .navbar {
   background: $primary-color;
@@ -119,18 +119,18 @@ $i: 1;
   font-size: rem(24);
 }
 
-@use "sass:color";
-@use "sass:math";
-@use "utils/mixins" as *;
+@use 'sass:color';
+@use 'sass:math';
+@use 'utils/mixins' as *;
 
 .box {
   background: color.adjust($primary-color, $lightness: 10%);
   width: math.div(100%, 3);
 }
 
-@import "reset";
-@import "variables";
-@import "base";
+@import 'reset';
+@import 'variables';
+@import 'base';
 
 %btn-shared {
   padding: 10px 20px;

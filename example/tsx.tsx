@@ -1,18 +1,18 @@
 // @ts-ignore
-import React from 'react';
+import React from 'react'
 
 interface MyButtonProps {
-  color: string;
+  color: string
   isT: boolean
 }
 
 class MyButtonClass {
   static defaultProps = {
     color: 'red',
-  };
+  }
 }
 
-const MyButton: React.FC<MyButtonProps> = () => <button>Click me</button>;
+const MyButton: React.FC<MyButtonProps> = () => <button>Click me</button>
 
 export default function jsx() {
   return (
@@ -22,5 +22,5 @@ export default function jsx() {
       <MyButton />
       <MyButtonClass />
     </div>
-  );
+  )
 }

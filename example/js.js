@@ -1,25 +1,25 @@
-var path = require('path');
-import { channel } from 'process';
+var path = require('path')
+import { channel } from 'process'
 import('./module.js').then((mod) => {
-  return mod;
-});
+  return mod
+})
 
-var variable = 'Hello World';
-let number = 19009;
-let float = 19.99;
-let boolean = true;
-const symbol2 = Symbol(42);
-const bigint = BigInt(1e1);
+var variable = 'Hello World'
+let number = 19009
+let float = 19.99
+let boolean = true
+const symbol2 = Symbol(42)
+const bigint = BigInt(1e1)
 
-variable = `${variable} from JS`;
-number = new Number(999);
-float = -19.99;
-number = Infinity;
-float = NaN;
-boolean = new Boolean(false);
+variable = `${variable} from JS`
+number = new Number(999)
+float = -19.99
+number = Infinity
+float = NaN
+boolean = new Boolean(false)
 
-const undef = undefined;
-const nul = null;
+const undef = undefined
+const nul = null
 
 const arr = [
   'str',
@@ -32,13 +32,13 @@ const arr = [
   null,
   { property: 'property' },
   ['str', 999, NaN],
-];
+]
 
-const [first, third] = [10, 20, 30];
+const [first, third] = [10, 20, 30]
 
-const arr2 = [...arr, 3, 4];
+const arr2 = [...arr, 3, 4]
 
-const msg = boolean ? 'yes' : 'no';
+const msg = boolean ? 'yes' : 'no'
 
 const obj = {
   str: 'str',
@@ -48,131 +48,129 @@ const obj = {
   arr: ['str', 999, NaN],
   obj2: { property: 18 },
   fn: function (arg1) {
-    return arg1;
+    return arg1
   },
   afn: () => {
-    return 'str';
+    return 'str'
   },
-};
-
-const obj2 = { ...obj, b: 99 };
-
-const { str: myStr, missing = 42 } = { str: 'hello' };
-
-[10, 20, 30].at(-1);
-
-'Hello'.at(-2);
-
-Object.hasOwn({ a: 1 }, 'a');
-
-arr.property.getFunction = function () {};
-
-function baseFn(arg0, arg1, cb) {
-  const localVar = arg0;
-  arg1.name = 'new name';
-  arg1.obj = {
-    property: 'property',
-  };
-  arg1.arr = ['str', 999, NaN];
-
-  arg1.fn();
-
-  this.obj.property = localVar;
-
-  cb && cb();
-
-  return this;
 }
 
-baseFn({})();
+const obj2 = { ...obj, b: 99 }
+
+const { str: myStr, missing = 42 } = { str: 'hello' }
+
+;[10, 20, 30].at(-1)
+
+'Hello'.at(-2)
+
+Object.hasOwn({ a: 1 }, 'a')
+
+arr.property.getFunction = function () {}
+
+function baseFn(arg0, arg1, cb) {
+  const localVar = arg0
+  arg1.name = 'new name'
+  arg1.obj = {
+    property: 'property',
+  }
+  arg1.arr = ['str', 999, NaN]
+
+  arg1.fn()
+
+  this.obj.property = localVar
+
+  cb && cb()
+
+  return this
+}
+
+baseFn({})()
 
 Array.from('')
 
 const arrowFn = async (arg = 1) => {
-  const localArgLen = arguments.length;
-  const localArg = arguments[0];
+  const localArgLen = arguments.length
+  const localArg = arguments[0]
 
-  const sum = localArgLen + arg;
+  const sum = localArgLen + arg
 
-  sum = Math.pow(sum, 2);
+  sum = Math.pow(sum, 2)
 
-  localArg = JSON.stringify(localArg);
+  localArg = JSON.stringify(localArg)
 
-  return sum;
-};
+  return sum
+}
 
 function* gen() {
-  yield 1;
-  yield 2;
+  yield 1
+  yield 2
 }
 
 class Parent {
-  static var;
-  #secret = 42;
-  static #count = 0;
+  static var
+  #secret = 42
+  static #count = 0
 
   constructor(name) {
-    this.name = name;
-    Parent.var = 'static var';
+    this.name = name
+    Parent.var = 'static var'
   }
 
   static staticMethod() {
     try {
-      throw new Error('Low-level error');
+      throw new Error('Low-level error')
     } catch (e) {
-      throw new Error('High-level error', { cause: e });
+      throw new Error('High-level error', { cause: e })
     }
   }
 
   method() {
-    const p = path.basename;
-    Parent.#count += p;
-    return this.#secret;
+    const p = path.basename
+    Parent.#count += p
+    return this.#secret
   }
 }
 
 class Child extends Parent {
   constructor(name, age) {
-    super(name);
-    this.age = age;
+    super(name)
+    this.age = age
   }
 }
 
 const pmt = new Promise((resolve, reject) => {
-  resolve();
-  reject();
+  resolve()
+  reject()
 })
   .then(() => {})
   .catch(() => {})
-  .finally(() => void 0);
+  .finally(() => void 0)
 
-Promise.all([pmt, pmt, pmt]).then(() => {});
-Promise.resolve().then(() => {});
+Promise.all([pmt, pmt, pmt]).then(() => {})
+Promise.resolve().then(() => {})
 
-await arrowFn(10);
+await arrowFn(10)
 
-new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(
-  123456,
-);
+new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(123456)
 
-fs.rewriteFile('path/to/file', 'content', (err) => {});
+fs.rewriteFile('path/to/file', 'content', (err) => {})
 
-window.document.body.innerHTML = `<h1>${variable}</h1>`;
-window.setTimeout(() => {});
-setInterval(() => {}, 1000);
-globalThis.setTimeout(() => console.log('OK'));
-requestAnimationFrame(() => {});
+window.document.body.innerHTML = `<h1>${variable}</h1>`
+window.setTimeout(() => {})
+setInterval(() => {}, 1000)
+globalThis.setTimeout(() => console.log('OK'))
+requestAnimationFrame(() => {})
 
 arr.forEach((item, index, arr) => {
-  console.log(item, index, arr);
-});
+  console.log(item, index, arr)
+})
 
 arr.map((item, index, arr) => {
-  console.log(item, index, arr);
-});
+  console.log(item, index, arr)
+})
 
 labelLoop: for (let i = 0; i < arr.length; i++) {
-  if (i === 3) break labelLoop;
+  if (i === 3) break labelLoop
 }
 
 for (const element of object) {
@@ -180,25 +178,25 @@ for (const element of object) {
   }
 }
 
-const val = null ?? 'default';
+const val = null ?? 'default'
 
-console.log(user.profile?.name);
+console.log(user.profile?.name)
 
-const target = { message: 'Hello' };
+const target = { message: 'Hello' }
 const handler = {
   get(obj, prop, receiver) {
-    console.log(`get ${prop}`);
-    return Reflect.get(obj, prop, receiver);
+    console.log(`get ${prop}`)
+    return Reflect.get(obj, prop, receiver)
   },
   set(obj, prop, value, receiver) {
-    console.log(`set ${prop} = ${value}`);
-    return Reflect.set(obj, prop, value, receiver);
+    console.log(`set ${prop} = ${value}`)
+    return Reflect.set(obj, prop, value, receiver)
   },
-};
-const proxy = new Proxy(target, handler);
+}
+const proxy = new Proxy(target, handler)
 
-console.log(proxy.message);
-proxy.newProp = 42;
+console.log(proxy.message)
+proxy.newProp = 42
 
 /**
  * link: https://google.com
@@ -217,7 +215,7 @@ proxy.newProp = 42;
  * @callback ProcessCallback
  */
 
-export const PI = 3.14;
+export const PI = 3.14
 export function fn() {}
 export default class MyClass {}
 export {
@@ -239,7 +237,7 @@ export {
   Child,
   val,
   Reflect,
-};
+}
 
 module.exports.helper = {
   PI,
@@ -248,23 +246,23 @@ module.exports.helper = {
   channel,
   number,
   float,
-};
+}
 
 exports = module.exports = {
   apiKey: '12345',
   apiUrl: 'https://api.example.com',
-};
+}
 
-const a = document.querySelector('.monaco-grid-view');
-const b = document.createElement('div');
-b.style.width = '100%';
-b.style.height = '100%';
-b.style.position = 'absolute';
-b.style.top = '0px';
-b.style.left = '0px';
-b.style.zIndex = 999999;
-b.style.opacity = 0.08;
-b.style.backgroundImage = `url(https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png)`;
-b.style.pointerEvents = 'none';
+const a = document.querySelector('.monaco-grid-view')
+const b = document.createElement('div')
+b.style.width = '100%'
+b.style.height = '100%'
+b.style.position = 'absolute'
+b.style.top = '0px'
+b.style.left = '0px'
+b.style.zIndex = 999999
+b.style.opacity = 0.08
+b.style.backgroundImage = `url(https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png)`
+b.style.pointerEvents = 'none'
 
-a.append(b);
+a.append(b)

@@ -1,4 +1,4 @@
-const MyButton = () => <button>Click me</button>;
+const MyButton = () => <button>Click me</button>
 
 export default function jsx() {
   return (
@@ -6,5 +6,5 @@ export default function jsx() {
       <div>123123</div>
       <MyButton />
     </>
-  );
+  )
 }

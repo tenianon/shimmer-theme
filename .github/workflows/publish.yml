@@ -28,7 +28,7 @@ jobs:
         run: |
           VERSION=${GITHUB_REF#refs/tags/}
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          
+
           # Extract changelog using sed
           sed -n "/^## $VERSION$/,/^## /p" CHANGELOG.md | sed '1d;$d' | sed '/^---$/d' | sed '/^$/N;/^\n$/D' > release_notes.md
 
@@ -43,7 +43,7 @@ jobs:
       - name: Package VSIX
         if: always()
         run: bun run package
-        
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:

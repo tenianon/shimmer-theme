@@ -1,4 +1,4 @@
-@import url("./reset.css");
+@import url('./reset.css');
 @font-face {
 }
 @layer base {
@@ -24,9 +24,9 @@ body {
   color-scheme: light dark;
 }
 
-.monaco-grid-view::after{
-  content: "";
-  background-image: url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png");
+.monaco-grid-view::after {
+  content: '';
+  background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
   width: 100%;
   height: 100%;
   position: fixed;
@@ -72,10 +72,10 @@ body {
 }
 
 .card::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background-image: url("/image.jpg");
+  background-image: url('/image.jpg');
   background-size: cover;
   background-position: center;
   mix-blend-mode: multiply;
@@ -195,9 +195,9 @@ ul:has(> li:only-child) {
 main {
   display: grid;
   grid-template-areas:
-    "header"
-    "content"
-    "footer";
+    'header'
+    'content'
+    'footer';
   grid-template-rows: auto 1fr auto;
   height: 100dvh;
 }
@@ -250,11 +250,7 @@ footer {
 }
 
 .img-mask {
-  -webkit-mask-image: radial-gradient(
-    circle at center,
-    black 60%,
-    transparent 100%
-  );
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
   mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
   mask-composite: exclude;
 }
@@ -277,8 +273,8 @@ fieldset:disabled * {
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter.woff2") format("woff2");
+  font-family: 'Inter';
+  src: url('/fonts/inter.woff2') format('woff2');
   font-weight: 100 900;
   font-display: swap;
 }
@@ -297,7 +293,7 @@ fieldset:disabled * {
   margin-bottom: 1rem;
 }
 
-input[type="range"] {
+input[type='range'] {
   accent-color: deeppink;
 }
 
@@ -349,7 +345,6 @@ input[type="range"] {
   view-transition-name: fade-box;
   contain: layout paint;
 }
-
 
 @media print {
   .visible-print {

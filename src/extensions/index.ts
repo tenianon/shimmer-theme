@@ -1,9 +1,9 @@
+import { registerParserColorThemeCommand } from './extractor-json-schema-types'
+
 import type { ExtensionContext } from 'vscode'
 
-import { registerParserColorThemeCommand } from './extractorJSONSchemaTypes'
-
 export function activate(context: ExtensionContext) {
-	registerParserColorThemeCommand(context)
+  registerParserColorThemeCommand(context)
 }
 
 export function deactivate() {}

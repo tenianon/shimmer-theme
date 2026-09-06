@@ -254,7 +254,6 @@ The Side Bar contains views like the Explorer and Search.
 - `sideBarStickyScroll.border`: Border color of sticky scroll in the side bar.
 - `sideBarStickyScroll.shadow`: Shadow color of sticky scroll in the side bar.
 
-
 ## Minimap
 
 The Minimap shows a minified version of the current file.
@@ -602,7 +601,8 @@ The editor comments widget can be seen when reviewing pull requests:
 
 Editor inline edits can be seen when using Copilot to suggest the next change to make:
 
-  `inlineEdit.gutterIndicator.primaryBorder`: Border color for the primary inline edit gutter indicator.
+`inlineEdit.gutterIndicator.primaryBorder`: Border color for the primary inline edit gutter indicator.
+
 - `inlineEdit.gutterIndicator.primaryForeground`: Foreground color for the primary inline edit gutter indicator.
 - `inlineEdit.gutterIndicator.primaryBackground`: Background color for the primary inline edit gutter indicator.
   `inlineEdit.gutterIndicator.secondaryBorder`: Border color for the secondary inline edit gutter indicator.
@@ -708,7 +708,7 @@ The Editor widget is shown in front of the editor content. Examples are the Find
 
 - `editorStickyScroll.background`: Editor sticky scroll background color.
 - `editorStickyScroll.border`: Border color of sticky scroll in the editor.
-- `editorStickyScroll.shadow`:  Shadow color of sticky scroll in the editor.
+- `editorStickyScroll.shadow`: Shadow color of sticky scroll in the editor.
 - `editorStickyScrollHover.background`: Editor sticky scroll on hover background color.
 
 The Debug Exception widget is a peek view that shows in the editor when debug stops at an exception.
@@ -1092,8 +1092,8 @@ The following customizations are available:
 - `gitDecoration.modifiedResourceForeground`: Color for modified Git resources. Used for file labels and the SCM viewlet.
 - `gitDecoration.deletedResourceForeground`: Color for deleted Git resources. Used for file labels and the SCM viewlet.
 - `gitDecoration.renamedResourceForeground`: Color for renamed or copied Git resources. Used for file labels and the SCM viewlet.
-- `gitDecoration.stageModifiedResourceForeground`: Color for staged modifications git decorations.  Used for file labels and the SCM viewlet.
-- `gitDecoration.stageDeletedResourceForeground`: Color for staged deletions git decorations.  Used for file labels and the SCM viewlet.
+- `gitDecoration.stageModifiedResourceForeground`: Color for staged modifications git decorations. Used for file labels and the SCM viewlet.
+- `gitDecoration.stageDeletedResourceForeground`: Color for staged deletions git decorations. Used for file labels and the SCM viewlet.
 - `gitDecoration.untrackedResourceForeground`: Color for untracked Git resources. Used for file labels and the SCM viewlet.
 - `gitDecoration.ignoredResourceForeground`: Color for ignored Git resources. Used for file labels and the SCM viewlet.
 - `gitDecoration.conflictingResourceForeground`: Color for conflicting Git resources. Used for file labels and the SCM viewlet.

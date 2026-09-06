@@ -1,35 +1,36 @@
 {
-	"name": "shimmer-theme",
-	"version": "0.1.5",
-	"description": "A theme may be comfortable",
-	"license": "MIT",
-	"engines": {
-		"vscode": "^1.85.0"
-	},
-	"contributes": {
-		"commands": [
-			{
-				"command": "parserColorTheme.run",
-				"title": "Generate Color Theme Types"
-			}
-		]
-	},
-	"main": "dist/index.cjs",
-	"scripts": {
-		"dev": "bun --watch src/index.ts",
-		"build": "bun src/index.ts",
-		"dev:extension": "bun build src/extension/index.ts --outfile dist/index.cjs --watch",
-		"build:extension": "bun build src/extension/index.ts --outfile dist/index.cjs",
-		"biome:format": "biome format --write src",
-		"biome:check": "biome check --write src",
-		"package": "cd build && vsce package --no-dependencies --out ../"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.2.5",
-		"@types/chroma-js": "^3.1.1",
-		"@types/node": "^24.7.0",
-		"@types/vscode": "^1.104.0",
-		"@vscode/vsce": "^3.6.2",
-		"chroma-js": "^3.2.0"
-	}
+  "name": "shimmer-theme",
+  "version": "0.1.5",
+  "description": "A theme may be comfortable",
+  "license": "MIT",
+  "main": "dist/index.cjs",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun src/index.ts",
+    "dev:extension": "bun build --external=vscode --format=cjs --target=node src/extensions/index.ts --outfile=dist/index.cjs --watch",
+    "build:extension": "bun build --external=vscode --format=cjs --target=node src/extensions/index.ts --outfile=dist/index.cjs",
+    "oxfmt": "oxfmt",
+    "oxfmt:check": "oxfmt --check",
+    "package": "cd build && vsce package --no-dependencies --out ../"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^3.1.1",
+    "@types/node": "^24.7.0",
+    "@types/vscode": "^1.104.0",
+    "@vscode/vsce": "^3.6.2",
+    "chroma-js": "^3.2.0",
+    "oxfmt": "^0.66.0",
+    "typescript": "^7.0.2"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "parserColorTheme.run",
+        "title": "Generate Color Theme Types"
+      }
+    ]
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  }
 }

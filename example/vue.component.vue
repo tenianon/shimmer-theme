@@ -1,13 +1,9 @@
 <script setup lang="ts">
-
 defineOptions({
- name: 'vue.component'
+  name: 'vue.component',
 })
-
 </script>
 <template>
-  <div>
-  </div>
+  <div></div>
 </template>
-<style>
-</style>
+<style></style>

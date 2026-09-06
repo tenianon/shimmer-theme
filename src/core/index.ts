@@ -1,4 +1,4 @@
 export * from './color'
-export * from './template/semanticTokenColors'
-export * from './template/textmateColors'
-export * from './template/workbenchColors'
+export * from './template/semantic-token-colors'
+export * from './template/textmate-colors'
+export * from './template/workbench-colors'

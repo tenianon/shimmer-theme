@@ -12,15 +12,17 @@
 
 **加粗文本**
 
-*斜体文本*
+_斜体文本_
 
 ~~删除线文本~~
 
-***加粗斜体文本***
+_**加粗斜体文本**_
 
 > 这是一个引用。
->> 这是一个嵌套引用。
->>> 这是一个嵌套引用。
+>
+> > 这是一个嵌套引用。
+> >
+> > > 这是一个嵌套引用。
 
 > 这是一个引用。
 
@@ -28,8 +30,10 @@
 - 项目二
   - 子项目一
   - 子项目二
+
 * 项目三
-+ 项目四
+
+- 项目四
 
 1. 第一项
 2. 第二项
@@ -43,14 +47,13 @@
 
 [内联链接](https://www.example.com)
 
-[带标题的链接](https://www.example.com "示例网站")
+[带标题的链接](https://www.example.com '示例网站')
 
 [引用链接][1]
 
-
 ![替代文本](https://www.example.com/image.jpg)
 
-![带标题的图片](https://www.example.com/image.jpg "图片标题")
+![带标题的图片](https://www.example.com/image.jpg '图片标题')
 
 这是 `行内代码` 的示例。
 
@@ -59,16 +62,15 @@ const a = 1
 ```
 
 | 姓名 | 年龄 | 城市 |
-|------|------|------|
+| ---- | ---- | ---- |
 | 张三 | 25   | 北京 |
 | 李四 | 30   | 上海 |
 
 ---
 
-***
+---
 
-___
-
+---
 
 \*这是星号，不是斜体\*
 
@@ -86,7 +88,7 @@ ___
 
 :smile: :heart: :+1: :100:
 
-H~2~O 是水的化学式。
+H~~2~~O 是水的化学式。
 
 X^2^ 表示 X 的平方。
 
@@ -100,32 +102,42 @@ X^2^ 表示 X 的平方。
 
 <!-- 这是一个注释，不会在渲染后的页面中显示 -->
 
-
 ---
+
 # 作者: [imageslr](https://imageslr.com)
+
 # 源码: [imageslr/mweb-themes](https://github.com/imageslr/mweb-themes)
+
 # 注意：此页面和 MWeb 中预览的效果可能有偏差，以后者为准。
+
 # 浅色主题: ayu, bear-default, contrast, d-boring, default, duotone-heat, duotone-light, gandalf, indigo, jzman, lark, lark-bold-color, olive-dunk, red-graphite, smartblue, solarized-light, typo, v-green, vue
+
 # 深色主题: ayu-mirage, charcoal, cobalt, dark-graphite, dieci, dracula, gotham, lighthouse, nord, panic, solarized-dark, toothpaste
+
 当前主题: lark # 更换此处的主题名称，可以预览主题
 ---
 
 # 中文排版示例
 
 ## 本篇引语
->《学而》是《论语》第一篇的篇名。《论语》中各篇一般都是以第一章的前二三个字作为该篇的篇名。《学而》一篇包括16章，内容涉及诸多方面。其中重点是「吾日三省吾身」；「节用而爱人，使民以时」；「礼之用，和为贵」以及仁、孝、信等道德范畴。
+
+> 《学而》是《论语》第一篇的篇名。《论语》中各篇一般都是以第一章的前二三个字作为该篇的篇名。《学而》一篇包括16章，内容涉及诸多方面。其中重点是「吾日三省吾身」；「节用而爱人，使民以时」；「礼之用，和为贵」以及仁、孝、信等道德范畴。
 
 ## 原文
+
 子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」
 
 ## 译文
+
 孔子说：「学了又时常温习和练习，不是很愉快吗？有志同道合的人从远方来，不是很令人高兴的吗？人家不了解我，我也不怨恨、恼怒，不也是一个有德的君子吗？」
 
 ## 评析
+
 宋代著名学者朱熹对此章评价极高，说它是「入道之门，积德之基」。本章这三句话是人们非常熟悉的。历来的解释都是：学了以后，又时常温习和练习，不也高兴吗等等。三句话，一句一个意思，前后句子也没有什么连贯性。但也有人认为这样解释不符合原义，指出：
-* 这里的「学」不是指学习，而是指学说或主张；
-* 「时」不能解为时常，而是时代或社会的意思；
-* 「习」不是温习，而是使用，引申为采用。
+
+- 这里的「学」不是指学习，而是指学说或主张；
+- 「时」不能解为时常，而是时代或社会的意思；
+- 「习」不是温习，而是使用，引申为采用。
 
 而且，这三句话不是孤立的，而是前后相互连贯的。这三句的意思是：自己的学说，要是被社会采用了，那就太高兴了；退一步说，要是没有被社会所采用，可是很多朋友赞同我的学说，纷纷到我这里来讨论问题，我也感到快乐；再退一步说，即使社会不采用，人们也不理解我，我也不怨恨，这样做，不也就是君子吗？（见《齐鲁学刊》1986年第6期文）这种解释可以自圆其说，而且也有一定的道理，供读者在理解本章内容时参考。
 
@@ -133,12 +145,12 @@ X^2^ 表示 X 的平方。
 
 总之，本章提出以学习为乐事，做到人不知而不愠，反映出孔子学而不厌、诲人不倦、注重修养、严格要求自己的主张。这些思想主张在《论语》书中多处可见，有助于对第一章内容的深入了解。
 
-* If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.  
-如果你希望成功，当以恒心为良友，以经验为参谋，以谨慎为兄弟，以希望为哨兵。
-* Sometimes one pays most for the things one gets for nothing.  
-有时候一个人为不花钱得到的东西付出的代价最高。
-* Only those who have the patience to do simple things perfectly ever acquire the skill to do difficult things easily.
-只有有耐心圆满完成简单工作的人，才能够轻而易举的完成困难的事。
+- If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.  
+  如果你希望成功，当以恒心为良友，以经验为参谋，以谨慎为兄弟，以希望为哨兵。
+- Sometimes one pays most for the things one gets for nothing.  
+  有时候一个人为不花钱得到的东西付出的代价最高。
+- Only those who have the patience to do simple things perfectly ever acquire the skill to do difficult things easily.
+  只有有耐心圆满完成简单工作的人，才能够轻而易举的完成困难的事。
 
 ## 英文排版
 
@@ -161,7 +173,6 @@ Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
 > 不過最需要強調的便是它的可讀性。一份使用 Markdown 格式撰寫的文件應該可以直接以純文字發佈，並且看起來不會像是由許多標籤或是格式指令所構成。
 > Markdown 的語法有個主要的目的：用來作為一種網路內容的*寫作*用語言。
 
-
 <!-- more -->
 
 ## 本文约定
@@ -173,31 +184,36 @@ Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
 Markdown 语法：
 
 ```
-# 第一级标题 `<h1>` 
-## 第二级标题 `<h2>` 
-### 第三级标题 `<h3>` 
-#### 第四级标题 `<h4>` 
-##### 第五级标题 `<h5>` 
-###### 第六级标题 `<h6>` 
+# 第一级标题 `<h1>`
+## 第二级标题 `<h2>`
+### 第三级标题 `<h3>`
+#### 第四级标题 `<h4>`
+##### 第五级标题 `<h5>`
+###### 第六级标题 `<h6>`
 ```
 
 效果如下：
 
-# 第一级标题 `<h1>` 
-## 第二级标题 `<h2>` 
-### 第三级标题 `<h3>` 
-#### 第四级标题 `<h4>` 
-##### 第五级标题 `<h5>` 
-###### 第六级标题 `<h6>` 
+# 第一级标题 `<h1>`
 
+## 第二级标题 `<h2>`
+
+### 第三级标题 `<h3>`
+
+#### 第四级标题 `<h4>`
+
+##### 第五级标题 `<h5>`
+
+###### 第六级标题 `<h6>`
 
 ## 链接
+
 Markdown 语法：
 
 ```
-email <example@example.com>  
-[GitHub](http://github.com)  
-自动生成链接  <http://www.github.com/>  
+email <example@example.com>
+[GitHub](http://github.com)
+自动生成链接  <http://www.github.com/>
 ```
 
 `Control + Shift + L` 可插入Markdown语法。
@@ -207,7 +223,7 @@ email <example@example.com>
 
 Email 链接： <example@example.com>  
 [连接标题Github网站](http://github.com)  
-自动生成链接： <http://www.github.com/>  
+自动生成链接： <http://www.github.com/>
 
 ## 多行或者一段代码
 
@@ -216,13 +232,12 @@ Markdown 语法：
 ​```js
 
 function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:&#39;#foo&#39;})
-  }
+if(arg) {
+$.facebox({div:&#39;#foo&#39;})
+}
 }
 
 ​```
-
 
 `CMD + Shift + K` 可插入Markdown语法。效果如下：
 
@@ -233,7 +248,6 @@ function fancyAlert(arg) {
 	}
 }
 ```
-
 
 ## 强调
 
@@ -251,11 +265,11 @@ __这些文字会生成`<strong>`__
 
 在 MWeb 中的快捷键为： `CMD + U`、`CMD + I`、`CMD + B`。效果如下：
 
-*这些文字会生成`<em>`*  
+_这些文字会生成`<em>`_  
 _这些文字会生成`<u>`_
 
 **这些文字会生成`<strong>`**  
-__这些文字会生成`<strong>`__
+**这些文字会生成`<strong>`**
 
 <mark>这些文字会生成`<mark>`</mark>
 
@@ -281,12 +295,12 @@ Markdown 语法：
 
 在 MWeb 中的快捷键为： `Option + U`。效果如下：
 
-* 项目一 无序列表 `* + 空格键`
-* 项目二
-	* 项目二的子项目一 无序列表 `TAB + * + 空格键`
-	* 项目二的子项目二
-		* 子项目
-			* 子项目
+- 项目一 无序列表 `* + 空格键`
+- 项目二
+  - 项目二的子项目一 无序列表 `TAB + * + 空格键`
+  - 项目二的子项目二
+    - 子项目
+      - 子项目
 
 ### 有序列表
 
@@ -294,7 +308,7 @@ Markdown 语法：
 
 ```
 1. 项目一 有序列表 `数字 + . + 空格键`
-2. 项目二 
+2. 项目二
 3. 项目三
 	1. 项目三的子项目一 有序列表 `TAB + 数字 + . + 空格键`
 	2. 项目三的子项目二
@@ -303,20 +317,20 @@ Markdown 语法：
 效果如下：
 
 1. 项目一 有序列表 `数字 + . + 空格键`
-2. 项目二 
-![GitHub set up](http://zh.mweb.im/asset/img/set-up-git.gif)
+2. 项目二
+   ![GitHub set up](http://zh.mweb.im/asset/img/set-up-git.gif)
 
 3. 项目三
-	1. 项目三的子项目一 有序列表 `TAB + 数字 + . + 空格键`
-	2. 项目三的子项目二
+   1. 项目三的子项目一 有序列表 `TAB + 数字 + . + 空格键`
+   2. 项目三的子项目二
 4. 项目四
 
 ### 列表中嵌入代码块语法
 
     1. 项目一 有序列表 `数字 + . + 空格键`
-        
+
         列表中嵌入代码块必须前后空一行，如这个写法
-           
+
         ```js
         function fancyAlert(arg) {
           if(arg) {
@@ -324,29 +338,31 @@ Markdown 语法：
           }
         }
         ```
-        
+
         其他文本。
-        
+
     1. 项目二
 
 效果如下：
+
 1. 项目一 有序列表 `数字 + . + 空格键`
-    
-    列表中嵌入代码块必须前后空一行，如这个写法
-       
-    ```js
-    function fancyAlert(arg) {
-      if(arg) {
-        $.facebox({div:&#39;#foo&#39;})
-      }
-    }
-    ```
-    
-    其他文本。
-    
+
+   列表中嵌入代码块必须前后空一行，如这个写法
+
+   ```js
+   function fancyAlert(arg) {
+     if(arg) {
+       $.facebox({div:&#39;#foo&#39;})
+     }
+   }
+   ```
+
+   其他文本。
+
 2. 项目二
 
 ### 任务列表（Task lists）
+
 Markdown 语法：
 
 ```
@@ -360,7 +376,7 @@ Markdown 语法：
 
 - [ ] 任务一 未做任务 `- + 空格 + [ ]`
 - [x] 任务二 已做任务 `- + 空格 + [x]`
-    - [ ] 任务三 未做任务 `- + 空格 + [ ]`
+  - [ ] 任务三 未做任务 `- + 空格 + [ ]`
 - [x] 任务四 已做任务 `- + 空格 + [x]`
 
 ## 图片
@@ -382,7 +398,6 @@ MWeb 引入的特别的语法来设置图片宽度，方法是在图片描述后
 
 ![GitHub set up-w140](http://zh.mweb.im/asset/img/set-up-git.gif)
 
-
 ## 区块引用
 
 Markdown 语法：
@@ -397,6 +412,7 @@ Markdown 语法：
 效果如下：
 
 某某说:
+
 > 第一行引用
 > 第二行引用文字
 
@@ -417,22 +433,22 @@ Markdown 语法：
 
 Markdown 语法：
 
-	​```sequence
-	张三->李四: 嘿，小四儿, 写博客了没?
-	Note right of 李四: 李四愣了一下，说：
-	李四-->张三: 忙得吐血，哪有时间写。
-	​```
-	
-	​```flow
-	st=>start: 开始
-	e=>end: 结束
-	op=>operation: 我的操作
-	cond=>condition: 确认？
-	
-	st->op->cond
-	cond(yes)->e
-	cond(no)->op
-	​```
+    ​```sequence
+    张三->李四: 嘿，小四儿, 写博客了没?
+    Note right of 李四: 李四愣了一下，说：
+    李四-->张三: 忙得吐血，哪有时间写。
+    ​```
+
+    ​```flow
+    st=>start: 开始
+    e=>end: 结束
+    op=>operation: 我的操作
+    cond=>condition: 确认？
+
+    st->op->cond
+    cond(yes)->e
+    cond(no)->op
+    ​```
 
 效果如下（ `Preferences` - `Themes` - `Enable sequence &amp; flow chart` 才会看到效果 ）：
 
@@ -468,16 +484,16 @@ Markdown 语法：
 
 效果如下：
 
-第一格表头 | 第二格表头
---------- | -------------
-内容单元格 第一列第一格 | 内容单元格第二列第一格
-内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格
+| 第一格表头                       | 第二格表头             |
+| -------------------------------- | ---------------------- |
+| 内容单元格 第一列第一格          | 内容单元格第二列第一格 |
+| 内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格 |
 
 ## 删除线
 
 Markdown 语法：
 
-	加删除线像这样用： ~~删除这些~~
+    加删除线像这样用： ~~删除这些~~
 
 效果如下：
 
@@ -489,21 +505,19 @@ Markdown 语法：
 
 ```
 ***
-	
+
 *****
-	
+
 - - -
 ```
 
 效果如下：
 
-***
+---
 
-*****
+---
 
-- - -
-
-
+---
 
 ## MathJax
 
@@ -529,9 +543,7 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
 {1+\frac{e^{-8\pi}} {1+\ldots} } } } \\]
 
-
 行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
-
 
 ## 脚注（Footnote）
 
@@ -548,15 +560,15 @@ Markdown 语法：
 这是另一个脚注：[^sample_footnote2]
 
 [^sample_footnote]: 这里是脚注信息
-[^sample_footnote2]: 这里是脚注信息
 
+[^sample_footnote2]: 这里是脚注信息
 
 ## 注释和阅读更多
 
 <!-- comment -->
 <!-- more -->
 
-Actions->Insert Read More Comment *或者* `Command + .`
+Actions->Insert Read More Comment _或者_ `Command + .`
 **注** 阅读更多的功能只用在生成网站或博客时，插入时注意要后空一行。
 
 ## TOC
